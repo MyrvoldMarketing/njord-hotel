@@ -190,7 +190,13 @@ body.scrolled .menu-toggle .hamburger span {
 }
 
 .menu-toggle.active {
-    width: 50vw;
+    width: 120px;
+    background: transparent;
+    color: #fff;
+}
+
+.menu-toggle.active .hamburger span {
+    background-color: #fff;
 }
 
 .hamburger {
@@ -278,23 +284,38 @@ body.scrolled .menu-toggle .hamburger span {
 
 .menu-content {
     padding: 60px 40px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.menu-nav {
+    height: 100%;
 }
 
 .menu-nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .menu-nav ul li {
     margin: 20px 0;
+    text-align: center;
 }
 
 .menu-nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     transition: opacity 0.3s ease;
+    font-family: 'SaolDisplay', serif;
+    font-weight: 100;
 }
 
 .menu-nav ul li a:hover {
