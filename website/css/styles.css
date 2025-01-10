@@ -162,7 +162,7 @@ p {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    z-index: 98;  
+    z-index: 999;  
     background: none;
     border: none;
     cursor: pointer;
@@ -568,7 +568,7 @@ body.scrolled .menu-toggle .hamburger span {
     color: #fff;
     padding: 40px 20px;
     position: relative;
-    z-index: 99;  
+    z-index: 1000;  
 }
 
 .footer-content {
