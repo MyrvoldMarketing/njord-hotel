@@ -231,12 +231,12 @@ p {
     transition: width 0.3s ease;
 }
 
-.discover-link:hover::after {
-    width: 100%;
+.discover-link:hover {
+    color: #000;
 }
 
-.discover-link:hover {
-    opacity: 0.8;
+.discover-link:hover::after {
+    width: 100%;
 }
 
 /* Menu Overlay */
