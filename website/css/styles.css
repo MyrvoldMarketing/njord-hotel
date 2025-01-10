@@ -544,60 +544,55 @@ body.scrolled .menu-toggle .hamburger span {
 .site-footer {
     background-color: #1a1a1a;
     color: #fff;
-    padding: 80px 0 20px;
+    padding: 60px 0 20px;
     margin-top: 80px;
-    position: relative;
-    z-index: 1001;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    padding: 0 20px;
 }
 
 .footer-section {
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: 'Saol Display', serif;
 }
 
 .footer-logo {
     max-width: 80px;
     height: auto;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.footer-logo img {
-    width: 100%;
-    height: auto;
+    margin-bottom: 15px;
 }
 
 .footer-description {
-    font-size: 0.9rem;
+    font-size: 14px;
     line-height: 1.6;
     color: #999;
-    margin-bottom: 20px;
-}
-
-.footer-section h3 {
-    font-family: 'SaolDisplay', serif;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    font-weight: 300;
 }
 
 .footer-section p {
-    font-size: 0.9rem;
+    font-size: 14px;
+    line-height: 1.6;
     color: #999;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
@@ -632,30 +627,22 @@ body.scrolled .menu-toggle .hamburger span {
 
 .footer-bottom {
     max-width: 1200px;
-    margin: 60px auto 0;
-    padding: 20px;
+    margin: 40px auto 0;
+    padding: 20px 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    font-size: 14px;
+    color: #999;
 }
 
 .footer-bottom p {
-    font-size: 0.8rem;
-    color: #666;
     margin: 0;
-    text-align: center;
-    width: 100%;
-}
-
-.myrvold-credit {
-    font-size: 0.75rem !important;
 }
 
 .myrvold-credit a {
-    color: #666;
+    color: #999;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -664,23 +651,16 @@ body.scrolled .menu-toggle .hamburger span {
     color: #fff;
 }
 
-/* Responsive Footer */
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
         text-align: center;
-    }
-
-    .footer-section {
-        margin-bottom: 40px;
-    }
-
-    .footer-logo {
-        margin: 0 auto 20px;
-    }
-
-    .social-links {
-        align-items: center;
+        gap: 10px;
     }
 }
 
