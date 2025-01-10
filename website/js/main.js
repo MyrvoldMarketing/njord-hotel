@@ -96,29 +96,56 @@ document.addEventListener('DOMContentLoaded', () => {
     // Starter animasjonen
     type();
 
-    // Menu toggle functionality
+    console.log('[Menu] Initializing menu functionality...');
+    
+    // Menu elements
     const menuToggle = document.querySelector('.menu-toggle');
     const menuOverlay = document.querySelector('.menu-overlay');
     const menuText = document.querySelector('.menu-text');
-    const defaultText = menuText.dataset.textDefault;
-    const activeText = menuText.dataset.textActive;
-
+    
+    // Verify all elements exist
+    if (!menuToggle || !menuOverlay || !menuText) {
+        console.error('[Menu] Missing required elements:', {
+            menuToggle: !!menuToggle,
+            menuOverlay: !!menuOverlay,
+            menuText: !!menuText
+        });
+        return;
+    }
+    
+    console.log('[Menu] All required elements found');
+    
+    const defaultText = menuText.dataset.textDefault || 'MENY';
+    const activeText = menuText.dataset.textActive || 'CLOSE';
+    
     const toggleMenu = (show) => {
-        menuToggle.classList.toggle('active', show);
-        menuOverlay.classList.toggle('active', show);
-        menuText.textContent = show ? activeText : defaultText;
-        document.body.style.overflow = show ? 'hidden' : '';
+        console.log(`[Menu] Toggling menu ${show ? 'open' : 'closed'}`);
+        
+        try {
+            menuToggle.classList.toggle('active', show);
+            menuOverlay.classList.toggle('active', show);
+            menuText.textContent = show ? activeText : defaultText;
+            document.body.style.overflow = show ? 'hidden' : '';
+            
+            console.log('[Menu] Menu state updated successfully');
+        } catch (error) {
+            console.error('[Menu] Error updating menu state:', error);
+        }
     };
-
+    
     menuToggle.addEventListener('click', () => {
+        console.log('[Menu] Menu toggle clicked');
         const isActive = menuToggle.classList.contains('active');
         toggleMenu(!isActive);
     });
-
+    
     // Close menu when clicking on a menu item
     const menuLinks = document.querySelectorAll('.menu-nav a');
+    console.log(`[Menu] Found ${menuLinks.length} menu links`);
+    
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
+            console.log('[Menu] Menu link clicked, closing menu');
             toggleMenu(false);
         });
     });
