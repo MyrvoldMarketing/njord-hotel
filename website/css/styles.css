@@ -419,6 +419,12 @@ h2 {
     transition: color 150ms ease-in-out;
 }
 
+.design-section .discover-button span,
+.suites-text .discover-button span {
+    position: relative;
+    z-index: 1;
+}
+
 .design-section .discover-button::after,
 .suites-text .discover-button::after {
     content: '';
