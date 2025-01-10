@@ -208,16 +208,15 @@ p {
     transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Hero discover link - alltid hvit */
 .discover-link {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    display: inline-block;
     margin-bottom: 1.5rem;
     position: relative;
-    text-transform: uppercase;
 }
 
 .discover-link::after {
@@ -232,7 +231,7 @@ p {
 }
 
 .discover-link:hover {
-    color: #000;
+    opacity: 0.8;
 }
 
 .discover-link:hover::after {
@@ -741,4 +740,9 @@ h2 {
     letter-spacing: 2px;
     margin-top: 15px;
     font-size: 0.8rem;
+}
+
+/* Svart discover button - svart tekst på hover */
+.discover-button:hover span {
+    color: #000;
 }
