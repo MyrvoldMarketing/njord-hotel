@@ -366,35 +366,39 @@ p {
     padding-right: 40px;
 }
 
+/* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.6rem;
+    font-size: 14px;
     letter-spacing: 2px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 20px;
     display: block;
+    color: #fff;
 }
 
-.suites-text h2 {
+/* Standardiserte h2 overskrifter */
+h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 3.5rem;
-    font-weight: normal;
+    font-size: 48px;
     line-height: 1.2;
-    margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: normal;
 }
 
-.suites-text h2 em {
-    font-family: 'SaolDisplay', serif;
-    font-style: italic;
-    font-weight: 300;
+.suites-section .section-label,
+.design-section .section-label,
+.vision-section .section-label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
-.suites-text p {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-top: 0.1rem;
-    margin-bottom: 1rem;
-    color: #666;
+.suites-section h2,
+.design-section h2,
+.vision-section h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
 }
 
 /* Felles stil for discover-buttons med svart bakgrunn */
@@ -456,19 +460,19 @@ p {
 
 .design-section .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.6rem;
+    font-size: 14px;
     letter-spacing: 2px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 20px;
     display: block;
 }
 
 .design-section h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 3.5rem;
+    font-size: 48px;
     font-weight: 100;
     letter-spacing: 2px;
     line-height: 1.4;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     font-style: italic;
 }
 
@@ -680,15 +684,6 @@ p {
     position: relative;
 }
 
-.section-label {
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
-    color: #000;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 40px;
-}
-
 .vision-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -701,7 +696,7 @@ p {
 .vision-content h2 {
     font-family: 'SaolDisplay', serif;
     font-weight: 100;
-    font-size: 4rem;
+    font-size: 48px;
     line-height: 1.2;
     color: #000;
     margin: 0;
