@@ -592,15 +592,20 @@ p {
 }
 
 .footer-bottom {
-    text-align: center;
+    width: 100%;
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-bottom p {
     margin: 5px 0;
-    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
 }
 
 .footer-bottom a {
