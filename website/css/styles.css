@@ -370,10 +370,12 @@ p {
 /* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 7.5px;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #000;
     display: block;
+    margin-bottom: 20px;
 }
 
 /* Standardiserte h2 overskrifter */
@@ -389,7 +391,7 @@ h2 {
 .suites-section .section-label,
 .design-section .section-label,
 .vision-section .section-label {
-    font-size: 14px;
+    font-size: 7.5px;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
@@ -466,10 +468,12 @@ h2 {
 
 .design-section .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 7.5px;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #000;
     display: block;
+    margin-bottom: 20px;
 }
 
 .design-section h2 {
@@ -723,9 +727,12 @@ h2 {
 }
 
 .vision-label {
-    font-size: 1rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 7.5px;
     letter-spacing: 2px;
-    color: #333;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 15px;
 }
 
 /* Responsive design for vision section */
