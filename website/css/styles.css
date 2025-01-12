@@ -143,13 +143,14 @@ h1 em {
 
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-top: 0.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.8;
-    max-width: 600px;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
+    text-align: justify;
 }
 
 .button-container {
@@ -370,21 +371,20 @@ p {
 /* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 3px;
-    letter-spacing: 3px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: #000;
-    display: block;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 /* Standardiserte h2 overskrifter */
 h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 65px;
+    font-size: 55px;
     line-height: 1.2;
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 300;
 }
 
@@ -407,18 +407,16 @@ h2 {
 .design-section .discover-button,
 .suites-text .discover-button {
     display: inline-block;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    padding: 15px 30px;
-    background: #000;
-    color: #fff !important;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+    font-weight: 400;
     text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.1rem;
-    margin-top: 0.1rem;
-    position: relative;
-    border: 1px solid #000;
-    overflow: hidden;
-    transition: color 200ms ease-in-out;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    transition: background-color 200ms ease-in-out;
 }
 
 .design-section .discover-button span,
@@ -443,13 +441,7 @@ h2 {
 
 .design-section .discover-button:hover,
 .suites-text .discover-button:hover {
-    color: #000 !important;
-    border-color: #000;
-}
-
-.design-section .discover-button:hover::after,
-.suites-text .discover-button:hover::after {
-    width: 110%;
+    background-color: #333;
 }
 
 /* Design Section */
