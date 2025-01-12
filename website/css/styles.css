@@ -358,18 +358,18 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 200px;
+    padding-right: 100px;
 }
 
 .suites-text {
-    flex: 1;
-    max-width: 50%;
-    padding-right: 40px;
+    flex: 0 1 40%;
 }
 
 .suites-image {
-    flex: 1;
-    max-width: 50%;
+    flex: 0 1 55%;
 }
 
 .suites-image img {
