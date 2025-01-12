@@ -360,8 +360,8 @@ p {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 200px;
-    padding-right: 100px;
+    padding-left: 100px;
+    padding-right: 50px;
 }
 
 .suites-text {
