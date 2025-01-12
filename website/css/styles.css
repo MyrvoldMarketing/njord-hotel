@@ -38,7 +38,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -311,7 +311,7 @@ p {
 
 /* Experience Section */
 .experience-section {
-    padding: 500px 0;
+    padding: 100px 0;
     background: #fff;
 }
 
