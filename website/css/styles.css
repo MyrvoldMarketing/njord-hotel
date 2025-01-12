@@ -370,7 +370,7 @@ p {
 /* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 5px;
+    font-size: 3px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #000;
