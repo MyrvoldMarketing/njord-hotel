@@ -381,7 +381,7 @@ p {
 /* Standardiserte h2 overskrifter */
 h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 48px;
+    font-size: 58px;
     line-height: 1.2;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -399,7 +399,7 @@ h2 {
 .suites-section h2,
 .design-section h2,
 .vision-section h2 {
-    font-size: 48px;
+    font-size: 58px;
     margin-bottom: 30px;
 }
 
