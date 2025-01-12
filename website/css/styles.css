@@ -143,11 +143,11 @@ h1 em {
 
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-top: 0.1rem;
     margin-bottom: 1rem;
     line-height: 1.8;
-    max-width: 500px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -381,7 +381,7 @@ p {
 /* Standardiserte h2 overskrifter */
 h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 75px;
+    font-size: 65px;
     line-height: 1.2;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -399,7 +399,7 @@ h2 {
 .suites-section h2,
 .design-section h2,
 .vision-section h2 {
-    font-size: 75px;
+    font-size: 65px;
     margin-bottom: 15px;
 }
 
