@@ -423,16 +423,18 @@ h2 {
 .design-section .discover-button,
 .suites-text .discover-button {
     display: inline-block;
-    padding: 12px 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.7rem;
-    font-weight: 400;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 15px 30px;
+    background: #000;
+    color: #fff !important;
     text-decoration: none;
-    color: #fff;
-    background-color: #000;
-    border: none;
-    transition: background-color 200ms ease-in-out;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    margin-top: 0.1rem;
+    position: relative;
+    border: 1px solid #000;
+    overflow: hidden;
+    transition: color 200ms ease-in-out;
 }
 
 .design-section .discover-button span,
@@ -445,19 +447,24 @@ h2 {
 .suites-text .discover-button::after {
     content: '';
     position: absolute;
-    display: block;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
     width: 0;
     height: 100%;
-    background: #fff;
-    transition: width 150ms ease-in-out;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    transition: width 200ms ease-in-out;
 }
 
 .design-section .discover-button:hover,
 .suites-text .discover-button:hover {
-    background-color: #333;
+    color: #000 !important;
+    border-color: #000;
+}
+
+.design-section .discover-button:hover::after,
+.suites-text .discover-button:hover::after {
+    width: 110%;
 }
 
 /* Design Section */
