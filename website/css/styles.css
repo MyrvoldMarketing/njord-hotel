@@ -704,14 +704,33 @@ h2 {
 .vision-section {
     padding: 100px 20px;
     background: #fff;
-    text-align: left;
 }
 
 .vision-content {
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 60px;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.vision-content > div {
+    flex: 0 0 auto;
+}
+
+.vision-content p {
+    flex: 1;
     text-align: left;
+    margin: 0;
+    padding-top: 45px;
+}
+
+.vision-section h2 {
+    font-size: 65px;
+    margin-bottom: 15px;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .vision-grid {
@@ -748,12 +767,6 @@ h2 {
     text-transform: uppercase;
     color: #000;
     margin-top: 15px;
-}
-
-.vision-section h2 {
-    font-size: 65px;
-    margin-bottom: 15px;
-    text-align: left;
 }
 
 .vision-section p {
