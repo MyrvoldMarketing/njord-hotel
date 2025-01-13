@@ -300,11 +300,23 @@ p {
 .menu-main {
     display: flex;
     flex: 1;
-    gap: 40px;
+    gap: 60px;
+    position: relative;
+    padding: 0 40px;
+}
+
+.menu-main::after {
+    content: '';
+    position: absolute;
+    left: calc(20% + 30px);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .menu-nav {
-    width: 40%;
+    width: 20%;
     display: flex;
     align-items: center;
 }
@@ -351,11 +363,12 @@ p {
 }
 
 .menu-features {
-    width: 60%;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: center;
+    padding-left: 60px;
 }
 
 .feature-item {
