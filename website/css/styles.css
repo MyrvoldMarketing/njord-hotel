@@ -193,7 +193,8 @@ p {
     width: 100%;
     height: 2px;
     background-color: #000;
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
 }
 
 /* Hamburger to X animation */
@@ -202,7 +203,10 @@ p {
 }
 
 .menu-toggle.active .hamburger span:nth-child(2) {
+    width: 0;
     opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-toggle.active .hamburger span:nth-child(3) {
