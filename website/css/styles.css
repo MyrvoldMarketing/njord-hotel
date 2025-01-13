@@ -150,7 +150,7 @@ p {
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
+    text-align: center;
 }
 
 .button-container {
@@ -349,7 +349,7 @@ p {
 
 /* Suites Section */
 .suites-section {
-    padding: 500px 0;
+    padding: 100px 0;
     background: #fff;
     color: #333;
 }
