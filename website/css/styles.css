@@ -704,12 +704,14 @@ h2 {
 .vision-section {
     padding: 100px 20px;
     background: #fff;
+    text-align: left;
 }
 
 .vision-content {
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 60px;
+    text-align: left;
 }
 
 .vision-grid {
@@ -746,6 +748,19 @@ h2 {
     text-transform: uppercase;
     color: #000;
     margin-top: 15px;
+}
+
+.vision-section h2 {
+    font-size: 65px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.vision-section p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
 }
 
 /* Responsive design for vision section */
