@@ -164,9 +164,9 @@ p {
     left: 50%;
     transform: translateX(-50%);
     padding: 12px 24px;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.8);
     border: none;
-    color: #000;
+    color: #fff;
     font-size: 0.9rem;
     letter-spacing: 1px;
     cursor: pointer;
@@ -175,8 +175,16 @@ p {
     align-items: center;
     gap: 10px;
     width: 120px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 998;
+}
+
+.menu-toggle.active {
+    width: 90%;
+    max-width: 1200px;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 15px 30px;
 }
 
 .hamburger {
@@ -264,12 +272,12 @@ p {
     max-width: 1200px;
     height: 0;
     background: rgb(20, 20, 20);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 30px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    margin-bottom: 100px;
 }
 
 .menu-overlay.active {
@@ -302,13 +310,15 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
+    gap: 20px;
+    padding-left: 60px;
 }
 
 .menu-nav ul li {
-    margin: 20px 0;
-    text-align: center;
+    margin: 0;
+    text-align: left;
 }
 
 .menu-nav ul li a {
@@ -319,10 +329,23 @@ p {
     transition: opacity 0.3s ease;
     font-family: 'SaolDisplay', serif;
     font-weight: 100;
+    position: relative;
+    padding: 5px 0;
 }
 
-.menu-nav ul li a:hover {
-    opacity: 0.7;
+.menu-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.menu-nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Experience Section */
