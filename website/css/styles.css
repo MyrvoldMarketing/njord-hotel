@@ -228,6 +228,7 @@ p {
     bottom: -2px;
     left: 0;
     background-color: #fff;
+    transition: opacity 0.2s ease;
 }
 
 .discover-link::before {
@@ -241,8 +242,8 @@ p {
     transition: width 0.3s ease;
 }
 
-.discover-link:hover {
-    opacity: 0.8;
+.discover-link:hover::after {
+    opacity: 0;
 }
 
 .discover-link:hover::before {
