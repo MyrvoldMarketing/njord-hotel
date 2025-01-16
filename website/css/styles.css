@@ -541,7 +541,7 @@ p {
 /* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 7px;
