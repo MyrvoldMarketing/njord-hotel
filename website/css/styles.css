@@ -585,6 +585,7 @@ h2 {
 .design-section .discover-button span,
 .suites-text .discover-button span {
     position: relative;
+    z-index: 1;
 }
 
 .design-section .discover-button::after,
