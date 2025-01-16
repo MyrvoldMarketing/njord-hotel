@@ -165,8 +165,9 @@ p {
 
 .menu-toggle {
     position: fixed;
-    top: 40px;
-    right: 40px;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     gap: 10px;
