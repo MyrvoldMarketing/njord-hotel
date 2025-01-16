@@ -521,14 +521,15 @@ p {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 40px;
 }
 
 .suites-text {
-    flex: 0 1 40%;
+    flex: 0 1 45%;
 }
 
 .suites-image {
-    flex: 0 1 55%;
+    flex: 0 1 50%;
 }
 
 .suites-image img {
