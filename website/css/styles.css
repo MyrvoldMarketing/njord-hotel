@@ -870,9 +870,10 @@ h2 {
     text-align: center;
 }
 
-.vision-image {
+.vision-grid .vision-image {
     width: 100%;
-    height: 300px;
+    height: auto;
+    border: 1px solid #000;
     object-fit: cover;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
