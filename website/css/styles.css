@@ -225,8 +225,8 @@ p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
     margin-bottom: 1.5rem;
     position: relative;
 }
@@ -239,7 +239,7 @@ p {
     bottom: -2px;
     left: 0;
     background-color: #fff;
-    transition: opacity 0.2s ease;
+    opacity: 1;
 }
 
 .discover-link::before {
