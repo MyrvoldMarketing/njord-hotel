@@ -140,12 +140,17 @@ h1 em {
     font-weight: 300;
 }
 
+/* Global paragraph style */
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
+    line-height: 1.8;
     margin-top: 0.1rem;
     margin-bottom: 1.5rem;
-    line-height: 1.8;
+}
+
+/* Hero-specific paragraph style */
+.hero-content p {
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
@@ -550,13 +555,12 @@ p {
 /* Standardiserte h2 overskrifter */
 h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 80px;
+    font-size: 75px;
     line-height: 1.2;
     margin-top: 10px;
     margin-bottom: 20px;
     font-weight: 300;
 }
-
 
 /* Felles stil for discover-buttons med svart bakgrunn */
 .design-section .discover-button,
@@ -631,17 +635,14 @@ h2 {
 }
 
 .design-section h2 {
-    font-family: 'SaolDisplay', serif;
     font-size: 48px;
     font-weight: 100;
     letter-spacing: 2px;
     line-height: 1.4;
-    margin-bottom: 30px;
     font-style: italic;
 }
 
 .design-section p {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     margin-top: 0.1rem;
