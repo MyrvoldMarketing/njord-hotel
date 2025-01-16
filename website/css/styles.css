@@ -731,20 +731,21 @@ h2 {
 .contact-info {
     width: 35%;
     padding: 40px;
-    background: #1a1a1a;
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
 
 .contact-info h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 15px;
     font-weight: 300;
+    letter-spacing: -0.5px;
 }
 
 .contact-info p {
-    font-size: 16px;
-    line-height: 1.6;
-    opacity: 0.8;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
 }
 
 .contact-form-container {
@@ -759,15 +760,17 @@ h2 {
 }
 
 .contact-form-container h1 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
+    letter-spacing: -0.5px;
 }
 
 .form-subtitle {
+    font-size: 14px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: #666;
 }
 
@@ -804,11 +807,12 @@ h2 {
 .contact-form select,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 0;
+    font-size: 13px;
     color: #333;
+    height: 48px;
 }
 
 .contact-form select {
@@ -820,23 +824,41 @@ h2 {
 }
 
 .contact-form textarea {
-    height: 100px;
+    height: 120px;
     resize: none;
 }
 
 .checkbox-group {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
+    margin: 5px 0;
 }
 
 .checkbox-group input[type="checkbox"] {
-    width: auto;
-    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #000;
 }
 
 .checkbox-group span {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.4;
     color: #666;
 }
@@ -844,41 +866,27 @@ h2 {
 .submit-button {
     width: 100%;
     padding: 15px;
-    background: #1a1a1a;
+    background: #0066ff;
     color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 0;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: 48px;
+    margin-top: 10px;
 }
 
 .submit-button:hover {
-    background: #333;
+    background: #0052cc;
 }
 
 .privacy-notice {
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 15px;
+    font-size: 11px;
     color: #666;
     line-height: 1.4;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-    
-    .contact-info,
-    .contact-form-container {
-        width: 100%;
-    }
-    
-    .form-row {
-        flex-direction: column;
-        gap: 15px;
-    }
 }
 
 /* Footer */
