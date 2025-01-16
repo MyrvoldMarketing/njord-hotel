@@ -525,11 +525,11 @@ p {
 }
 
 .suites-text {
-    flex: 0 1 40%;
+    flex: 0 1 55%;
 }
 
 .suites-image {
-    flex: 0 1 55%;
+    flex: 0 1 40%;
 }
 
 .suites-image img {
