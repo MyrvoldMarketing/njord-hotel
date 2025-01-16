@@ -519,9 +519,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1600px;
+    max-width: 1550px;
     margin: 0 auto;
-    padding: 40;
+    padding: 40px;
 }
 
 .suites-text {
