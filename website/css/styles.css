@@ -165,23 +165,22 @@ p {
 
 .menu-toggle {
     position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 12px 24px;
-    background: rgba(0, 0, 0, 0.8);
-    border: none;
-    color: #fff;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    border-radius: 50px;
+    top: 40px;
+    right: 40px;
     display: flex;
     align-items: center;
     gap: 10px;
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    padding: 15px 25px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
     width: 120px;
-    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 998;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-toggle.active {
