@@ -128,11 +128,10 @@ body {
 
 h1 {
     font-family: 'SaolDisplay', serif;
-    font-size: 3.5rem;
-    font-weight: 100;
+    font-size: 3rem;
+    font-weight: 300;
     letter-spacing: 2px;
     line-height: 1.4;
-    font-style: normal;
 }
 
 h1 em {
@@ -143,7 +142,7 @@ h1 em {
 
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-top: 0.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
