@@ -541,10 +541,9 @@ p {
 /* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 7rem;
+    font-size: 25px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-decoration: underline;
     margin-bottom: 7px;
     font-weight: 400;
 }
