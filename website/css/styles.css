@@ -519,17 +519,17 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1400px;
-    margin: 5% 8% 5% 8%;
+    max-width: 1550px;
+    margin: 8% 5% 8% 12%;
 }
 
 .suites-text {
-    flex: 0 1 45%;
-    padding-right: 2%;
+    flex: 0 1 35%;
+    padding-right: 5%;
 }
 
 .suites-image {
-    flex: 0 1 45%;
+    flex: 0 1 50%;
 }
 
 .suites-image img {
