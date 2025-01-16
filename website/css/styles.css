@@ -544,6 +544,7 @@ p {
     font-size: 7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-decoration: underline;
     margin-bottom: 7px;
     font-weight: 400;
 }
