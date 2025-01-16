@@ -343,7 +343,7 @@ p {
 
 .menu-nav ul li a {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 0.8rem;
     letter-spacing: 1.5px;
@@ -357,7 +357,7 @@ p {
     height: 1px;
     bottom: -2px;
     left: 0;
-    background-color: #000;
+    background-color: #fff;
     opacity: 1;
 }
 
@@ -368,7 +368,7 @@ p {
     height: 1px;
     bottom: -2px;
     left: 0;
-    background-color: #000;
+    background-color: #fff;
     transition: width 0.7s ease;
 }
 
