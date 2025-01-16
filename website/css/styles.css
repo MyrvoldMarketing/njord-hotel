@@ -520,7 +520,7 @@ p {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0;
+    padding: 0px 20px;
 }
 
 .suites-text {
