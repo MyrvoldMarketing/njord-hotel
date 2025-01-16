@@ -541,7 +541,7 @@ p {
 /* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -551,7 +551,7 @@ p {
 /* Standardiserte h2 overskrifter */
 h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 60px;
+    font-size: 70px;
     line-height: 1.2;
     margin-top: 10px;
     margin-bottom: 20px;
