@@ -541,7 +541,7 @@ p {
 /* Standardiserte seksjonsoverskrifter */
 .section-label {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 7px;
@@ -558,9 +558,9 @@ h2 {
     font-weight: 300;
 }
 
-.suites-section .section-label,
-.design-section .section-label,
-.vision-section .section-label {
+.suites-section,
+.design-section,
+.vision-section {
     font-size: 7.5px;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -635,7 +635,7 @@ h2 {
     padding: 0 20px;
 }
 
-.design-section .section-label {
+.design-section {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 7.5px;
     letter-spacing: 2px;
