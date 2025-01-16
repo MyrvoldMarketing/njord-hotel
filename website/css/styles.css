@@ -520,8 +520,7 @@ p {
     align-items: center;
     justify-content: space-between;
     max-width: 1550px;
-    margin: 5%;
-    padding: 40px;
+    margin: 5% 5% 5% 7%;
 }
 
 .suites-text {
