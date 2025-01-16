@@ -550,27 +550,13 @@ p {
 /* Standardiserte h2 overskrifter */
 h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 70px;
+    font-size: 80px;
     line-height: 1.2;
     margin-top: 10px;
     margin-bottom: 20px;
     font-weight: 300;
 }
 
-.suites-section,
-.design-section,
-.vision-section {
-    font-size: 7.5px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.suites-section h2,
-.design-section h2,
-.vision-section h2 {
-    font-size: 65px;
-    margin-bottom: 15px;
-}
 
 /* Felles stil for discover-buttons med svart bakgrunn */
 .design-section .discover-button,
