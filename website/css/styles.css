@@ -342,29 +342,41 @@ p {
 }
 
 .menu-nav ul li a {
-    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
     text-decoration: none;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    transition: opacity 0.3s ease;
-    font-family: 'SaolDisplay', serif;
-    font-weight: 100;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
     position: relative;
-    padding: 5px 0;
 }
 
 .menu-nav ul li a::after {
     content: '';
     position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000;
+    opacity: 1;
+}
+
+.menu-nav ul li a::before {
+    content: '';
+    position: absolute;
     width: 0;
     height: 1px;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
-    background-color: #fff;
-    transition: width 0.3s ease;
+    background-color: #000;
+    transition: width 0.7s ease;
 }
 
 .menu-nav ul li a:hover::after {
+    opacity: 0;
+}
+
+.menu-nav ul li a:hover::before {
     width: 100%;
 }
 
