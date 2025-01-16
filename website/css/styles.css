@@ -520,7 +520,7 @@ p {
     align-items: center;
     justify-content: space-between;
     max-width: 1550px;
-    margin: 0 auto;
+    margin: 5%;
     padding: 40px;
 }
 
@@ -556,7 +556,7 @@ p {
 /* Standardiserte h2 overskrifter */
 h2 {
     font-family: 'SaolDisplay', serif;
-    font-size: 75px;
+    font-size: 70px;
     line-height: 1.2;
     margin-top: 10px;
     margin-bottom: 20px;
