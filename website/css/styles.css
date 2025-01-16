@@ -566,18 +566,15 @@ h2 {
 .design-section .discover-button,
 .suites-text .discover-button {
     display: inline-block;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    padding: 15px 30px;
-    background: #000;
-    color: #fff !important;
+    background-color: #000;
+    color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.1rem;
-    margin-top: 0.1rem;
-    position: relative;
-    border: 1px solid #000;
-    overflow: hidden;
-    transition: color 200ms ease-in-out;
+    padding: 12px 35px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
 }
 
 .design-section .discover-button span,
@@ -601,7 +598,7 @@ h2 {
 
 .design-section .discover-button:hover,
 .suites-text .discover-button:hover {
-    color: #000 !important;
+    color: #000;
     border-color: #000;
 }
 
