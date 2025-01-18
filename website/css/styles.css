@@ -583,7 +583,8 @@ h2 {
 
 /* Felles stil for discover-buttons med svart bakgrunn */
 .design-section .discover-button,
-.suites-text .discover-button {
+.suites-text .discover-button,
+.contact-form .discover-button {
     display: inline-block;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     padding: 12px 60px;
@@ -600,13 +601,15 @@ h2 {
 }
 
 .design-section .discover-button span,
-.suites-text .discover-button span {
+.suites-text .discover-button span,
+.contact-form .discover-button span {
     position: relative;
     z-index: 1;
 }
 
 .design-section .discover-button::after,
-.suites-text .discover-button::after {
+.suites-text .discover-button::after,
+.contact-form .discover-button::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -619,13 +622,15 @@ h2 {
 }
 
 .design-section .discover-button:hover,
-.suites-text .discover-button:hover {
+.suites-text .discover-button:hover,
+.contact-form .discover-button:hover {
     color: #000 !important;
     border-color: #000;
 }
 
 .design-section .discover-button:hover::after,
-.suites-text .discover-button:hover::after {
+.suites-text .discover-button:hover::after,
+.contact-form .discover-button:hover::after {
     width: 110%;
 }
 
