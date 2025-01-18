@@ -34,7 +34,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
@@ -757,37 +757,28 @@ h2 {
 }
 
 .contact-form-container h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    font-weight: 400;
-    text-align: center;
-    margin: 30px 0;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 20px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .form-subtitle {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
     text-align: center;
+    font-size: 16px;
+    color: #666;
     margin-bottom: 30px;
-    color: #333;
 }
 
 .sign-in-text {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
     text-align: center;
+    font-size: 14px;
     margin-bottom: 40px;
-    color: #333;
 }
 
 .sign-in-link {
-    color: #8B0000;  /* Mørkere rød farge */
-    text-decoration: none;
-}
-
-.sign-in-link:hover {
+    color: #000;
     text-decoration: underline;
 }
 
@@ -799,7 +790,6 @@ h2 {
     border: none;
     border-bottom: 1px solid #ccc;
     background: transparent;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     color: #333;
     outline: none;
@@ -811,7 +801,6 @@ h2 {
 .form-group textarea::placeholder,
 .form-group select option[disabled] {
     color: #333;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     letter-spacing: 1px;
     opacity: 1;
