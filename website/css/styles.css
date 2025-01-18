@@ -757,12 +757,13 @@ h2 {
 }
 
 .contact-form-container h1 {
-    font-size: 42px;
-    font-family: 'SaolDisplay-Light', serif;
+    font-size: 48px;
+    font-family: 'SaolDisplay', serif;
     margin-bottom: 20px;
     font-weight: 300;
     letter-spacing: 0.5px;
     text-align: center;
+    line-height: 1.2;
 }
 
 .form-subtitle {
