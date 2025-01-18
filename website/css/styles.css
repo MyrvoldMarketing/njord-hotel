@@ -1159,3 +1159,14 @@ h2 {
 .contact-page .menu-toggle {
     display: none;
 }
+
+.contact-form .discover-button {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.contact-form .discover-button span {
+    text-align: center;
+}
