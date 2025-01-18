@@ -873,9 +873,9 @@ h2 {
     align-items: flex-start;
     gap: 10px;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.2;
     color: #666;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .checkbox-group label:last-child {
@@ -885,7 +885,7 @@ h2 {
 .checkbox-group input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    margin-top: 2px;
+    margin-top: 0;
 }
 
 .submit-button {
