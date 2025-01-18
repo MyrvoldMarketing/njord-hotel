@@ -745,21 +745,15 @@ h2 {
 }
 
 .contact-form-container {
+    padding: 40px;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.contact-logo {
-    width: 120px;
-    height: auto;
-    margin: 0 auto 40px;
-    display: block;
 }
 
 .contact-form-container h1 {
     font-size: 36px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     letter-spacing: 1px;
     text-align: center;
 }
@@ -768,13 +762,14 @@ h2 {
     text-align: center;
     font-size: 16px;
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    line-height: 1.6;
 }
 
 .sign-in-text {
     text-align: center;
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .sign-in-link {
@@ -782,11 +777,36 @@ h2 {
     text-decoration: underline;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 0;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0;
+    position: relative;
+}
+
+.form-group .required {
+    color: #D00;
+    position: absolute;
+    left: -10px;
+    top: 12px;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 8px 0;
+    padding: 12px 0;
     border: none;
     border-bottom: 1px solid #ccc;
     background: transparent;
@@ -797,24 +817,18 @@ h2 {
     letter-spacing: 1px;
 }
 
+.form-group input::first-letter,
+.form-group select::first-letter,
+.form-group textarea::first-letter {
+    color: #D00;
+}
+
 .form-group input::placeholder,
 .form-group textarea::placeholder,
 .form-group select option[disabled] {
     color: #333;
     font-size: 12px;
     letter-spacing: 1px;
-    opacity: 1;
-}
-
-.form-group input::-webkit-input-placeholder,
-.form-group textarea::-webkit-input-placeholder {
-    color: #333;
-    opacity: 1;
-}
-
-.form-group input:-ms-input-placeholder,
-.form-group textarea:-ms-input-placeholder {
-    color: #333;
     opacity: 1;
 }
 
@@ -829,20 +843,16 @@ h2 {
 }
 
 .form-group textarea {
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ccc;
-    min-height: 100px;
+    min-height: 120px;
     resize: vertical;
-}
-
-.form-row {
-    display: flex;
-    margin: 0 -10px;
+    margin-top: 20px;
 }
 
 .full-width {
     width: 100%;
-    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .checkbox-group {
