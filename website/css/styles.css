@@ -793,20 +793,27 @@ h2 {
 
 .form-group {
     flex: 1;
-    margin: 0 10px 20px;
+    margin: 0 10px 30px;
 }
 
 .form-group label {
     display: block;
     font-size: 12px;
     margin-bottom: 8px;
-    color: #666;
+    color: #333;
     letter-spacing: 1px;
 }
 
+.form-group label .required {
+    color: #ff0000;
+}
+
+.form-group label::first-letter {
+    color: #ff0000;
+}
+
 .form-group input,
-.form-group select,
-.form-group textarea {
+.form-group select {
     width: 100%;
     padding: 8px 0;
     border: none;
@@ -816,6 +823,19 @@ h2 {
     color: #333;
     outline: none;
     transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+    min-height: 100px;
+    resize: vertical;
 }
 
 .form-group input:focus,
@@ -828,15 +848,10 @@ h2 {
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23999" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 30px;
-}
-
-.form-group textarea {
-    min-height: 100px;
-    resize: vertical;
 }
 
 .form-row {
@@ -846,7 +861,7 @@ h2 {
 
 .full-width {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .checkbox-group {
