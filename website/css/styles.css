@@ -809,6 +809,7 @@ h2 {
     position: absolute;
     left: -10px;
     top: 12px;
+    margin-right: 5px;
 }
 
 .form-group input,
