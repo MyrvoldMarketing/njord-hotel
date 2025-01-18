@@ -708,7 +708,7 @@ h2 {
 .contact-logo {
     width: 100px;
     height: auto;
-    margin: 0 auto 40px;
+    margin: -20px auto 60px;
     display: block;
 }
 
@@ -764,6 +764,7 @@ h2 {
     letter-spacing: 0.5px;
     text-align: center;
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .form-subtitle {
