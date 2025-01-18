@@ -697,18 +697,24 @@ h2 {
 }
 
 .contact-form button {
-    padding: 15px 30px;
-    background: #007bff;
-    color: white;
+    background-color: #000;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    padding: 15px 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 30px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form button:hover {
-    background: #0056b3;
+    background-color: #333;
 }
 
 /* Contact Page Styles */
@@ -1136,4 +1142,11 @@ h2 {
     width: 70%;
     background-color: #ffffff;
     padding: 40px;
+}
+
+.contact-logo {
+    width: 80px;  
+    height: auto;
+    margin: 0 auto 40px;
+    display: block;
 }
