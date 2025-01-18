@@ -748,7 +748,9 @@ h2 {
 
 .contact-logo {
     width: 120px;
+    height: auto;
     margin-bottom: 40px;
+    display: block;
 }
 
 .contact-form-container h1 {
