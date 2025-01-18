@@ -707,8 +707,9 @@ h2 {
 
 .contact-logo {
     width: 100px;
-    margin-bottom: 40px;
-    margin-top: -20px;
+    height: auto;
+    margin: 0 auto 40px;
+    display: block;
 }
 
 .button-container {
@@ -757,10 +758,11 @@ h2 {
 
 .contact-form-container h1 {
     font-size: 42px;
-    font-family: 'IvyOra-Regular', serif;
+    font-family: 'SaoPaulo-Regular', serif;
     margin-bottom: 20px;
     font-weight: normal;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .form-subtitle {
