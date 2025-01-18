@@ -845,6 +845,7 @@ h2 {
     width: 100%;
     padding: 12px;
     border: none;
+    border-bottom: 1px solid #ddd;
     background-color: white;
     font-size: 13px;
     color: #999;
