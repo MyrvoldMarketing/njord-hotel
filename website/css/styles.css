@@ -865,20 +865,27 @@ h2 {
 }
 
 .checkbox-group {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .checkbox-group label {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.4;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label:last-child {
+    margin-bottom: 0;
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
 }
 
 .submit-button {
