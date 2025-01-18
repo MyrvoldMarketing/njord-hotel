@@ -697,44 +697,44 @@ h2 {
 }
 
 .contact-form button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 15px 40px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 12px 60px;
+    background: #000;
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
     margin-top: 30px;
-    width: auto;
+    position: relative;
+    border: 1px solid #000;
+    overflow: hidden;
+    transition: color 200ms ease-in-out;
+    cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-    z-index: 1;
 }
 
-.contact-form button:before {
+.contact-form button::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    width: 0;
     height: 100%;
     background-color: #fff;
-    transition: left 0.3s ease;
-    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: width 200ms ease-in-out;
 }
 
 .contact-form button:hover {
-    color: #000;
+    color: #000 !important;
+    border-color: #000;
 }
 
-.contact-form button:hover:before {
-    left: 0;
+.contact-form button:hover::after {
+    width: 110%;
 }
 
 /* Contact Page Styles */
