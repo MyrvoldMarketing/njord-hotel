@@ -1127,6 +1127,8 @@ h2 {
 .interest-form-layout {
     display: flex;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .interest-form-left {
@@ -1142,20 +1144,16 @@ h2 {
     text-align: center;
 }
 
-.interest-form-left .contact-info {
-    max-width: 300px;
-    margin: 0 auto;
+.interest-form-right {
+    width: 70%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
 }
 
-.contact-form .discover-button {
-    display: block;
-    width: fit-content;
-    margin: 30px auto;
-    text-align: center;
-}
-
-.contact-form .discover-button span {
-    text-align: center;
+.contact-form-container {
+    max-width: 800px;
+    width: 100%;
 }
 
 .contact-page .menu-toggle {
