@@ -1132,7 +1132,7 @@ h2 {
 }
 
 .interest-form-left {
-    width: 40%;
+    width: 35%;
     background-color: #f8f8f8;
     padding: 40px;
     position: sticky;
@@ -1145,7 +1145,7 @@ h2 {
 }
 
 .interest-form-right {
-    width: 60%;
+    width: 65%;
     padding: 40px;
     display: flex;
     justify-content: center;
