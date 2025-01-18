@@ -804,13 +804,6 @@ h2 {
     position: relative;
 }
 
-.form-group .required {
-    color: #D00;
-    position: absolute;
-    left: -10px;
-    top: 12px;
-}
-
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -842,13 +835,21 @@ h2 {
 }
 
 .form-group select {
-    cursor: pointer;
-    appearance: none;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     -webkit-appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23999" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23999" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
-    background-position: right center;
-    padding-right: 30px;
+    background-position: right 8px center;
 }
 
 .form-group textarea {
@@ -887,6 +888,14 @@ h2 {
     height: 16px;
     margin-top: 2px;
     accent-color: #666;
+}
+
+.required {
+    color: #ff0000;
+    margin-left: 4px;
+    line-height: 1;
+    position: relative;
+    top: -2px;
 }
 
 .submit-button {
