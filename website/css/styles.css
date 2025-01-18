@@ -799,17 +799,16 @@ h2 {
 }
 
 .form-group {
-    flex: 1;
-    margin: 0;
     position: relative;
+    flex: 1;
+    margin: 0 10px;
 }
 
-.form-group .required {
-    color: #D00;
+.required {
+    color: red;
     position: absolute;
     left: -10px;
     top: 12px;
-    margin-right: 5px;
 }
 
 .form-group input,
