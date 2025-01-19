@@ -144,15 +144,28 @@ body {
 }
 
 .nav-indicator {
-    width: 40px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
-    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.nav-indicator.active {
-    background-color: #fff;
+.nav-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.1s ease;
+}
+
+.nav-indicator.active::after {
+    width: 100%;
+    transition: width 5s linear;
 }
 
 .hero-content {

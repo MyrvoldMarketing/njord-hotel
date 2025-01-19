@@ -114,3 +114,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Slider functionality
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.nav-indicator');
+let currentSlide = 0;
+let slideInterval;
+
+function goToSlide(n) {
+    // Remove active class from current slide and indicator
+    slides[currentSlide].classList.remove('active');
+    indicators[currentSlide].classList.remove('active');
+    
+    // Update current slide
+    currentSlide = (n + slides.length) % slides.length;
+    
+    // Add active class to new slide and indicator
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide].classList.add('active');
+    
+    // Reset and start the interval
+    clearInterval(slideInterval);
+    startSlideTimer();
+}
+
+function startSlideTimer() {
+    // Clear any existing interval
+    clearInterval(slideInterval);
+    
+    // Start new interval
+    slideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+    }, 5000); // Match this with the CSS transition time (5s)
+}
+
+// Initialize slider
+document.addEventListener('DOMContentLoaded', () => {
+    // Add click handlers to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index));
+    });
+    
+    // Start the timer
+    startSlideTimer();
+    
+    // Start with first slide active
+    goToSlide(0);
+});
