@@ -120,8 +120,12 @@ const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.nav-indicator');
 let currentSlide = 0;
 let slideInterval;
+let isTransitioning = false;
 
 function goToSlide(n) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    
     // Remove active class from current slide and indicator
     slides[currentSlide].classList.remove('active');
     indicators[currentSlide].classList.remove('active');
@@ -135,7 +139,12 @@ function goToSlide(n) {
     
     // Reset and start the interval
     clearInterval(slideInterval);
-    startSlideTimer();
+    
+    // Wait for transition to complete before allowing next slide
+    setTimeout(() => {
+        isTransitioning = false;
+        startSlideTimer();
+    }, 500); // Match this with CSS transition time
 }
 
 function startSlideTimer() {
@@ -144,7 +153,9 @@ function startSlideTimer() {
     
     // Start new interval
     slideInterval = setInterval(() => {
-        goToSlide(currentSlide + 1);
+        if (!isTransitioning) {
+            goToSlide(currentSlide + 1);
+        }
     }, 5000); // Match this with the CSS transition time (5s)
 }
 
@@ -152,12 +163,17 @@ function startSlideTimer() {
 document.addEventListener('DOMContentLoaded', () => {
     // Add click handlers to indicators
     indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => goToSlide(index));
+        indicator.addEventListener('click', () => {
+            if (!isTransitioning) {
+                goToSlide(index);
+            }
+        });
     });
+    
+    // Start with first slide active
+    slides[0].classList.add('active');
+    indicators[0].classList.add('active');
     
     // Start the timer
     startSlideTimer();
-    
-    // Start with first slide active
-    goToSlide(0);
 });
