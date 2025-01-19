@@ -182,11 +182,11 @@ body {
     line-height: 1.2;
     margin: 0;
     font-weight: normal;
+    font-family: 'SaolDisplay', serif;
 }
 
 .text-content h1 em {
-    font-family: 'SaolDisplay-LightItalic', serif;
-    font-style: normal; /* Fjerner standard italic styling siden vi bruker egen font */
+    font-style: italic;
     font-weight: 300;
 }
 
@@ -198,6 +198,11 @@ body {
     max-width: 600px;
     margin: 0;
     font-family: 'SaolDisplay', serif;
+}
+
+.light-italic {
+    font-style: italic;
+    font-weight: 300;
 }
 
 /* Hero discover link - alltid hvit */
