@@ -166,7 +166,7 @@ body {
 }
 
 .text-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 300;
     letter-spacing: 4px;
     margin: 0;
@@ -175,7 +175,7 @@ body {
 }
 
 .text-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 1px;
     line-height: 1.6;
