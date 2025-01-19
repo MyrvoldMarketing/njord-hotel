@@ -135,18 +135,18 @@ body {
 
 .slider-nav {
     position: absolute;
-    bottom: 120px;
+    bottom: 140px;  
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 30px;
+    gap: 15px;  
     z-index: 10;
 }
 
 .nav-indicator {
-    width: 40px;
+    width: 30px;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
 }
