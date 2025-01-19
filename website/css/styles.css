@@ -192,17 +192,19 @@ body {
 }
 
 .logo-container {
-    margin-bottom: 60px;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 40px;
 }
 
 .hero-logo {
-    width: 100px;
+    width: 100%;
     height: auto;
 }
 
 .text-content {
+    width: 100%;
     max-width: 800px;
-    text-align: center;
 }
 
 h1 {
