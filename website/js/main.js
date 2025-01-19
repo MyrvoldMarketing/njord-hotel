@@ -47,55 +47,6 @@ if (contactForm) {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded');
     
-    const words = ['NATURLIGA', 'VACKRA', 'SKÖNA'];
-    const typewriterElement = document.querySelector('.typewriter');
-    
-    console.log('Typewriter element:', typewriterElement);
-    
-    if (!typewriterElement) {
-        console.error('Could not find typewriter element');
-        return;
-    }
-
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            // Sletter bokstaver
-            typewriterElement.textContent = currentWord.substring(0, charIndex);
-            charIndex--;
-        } else {
-            // Skriver bokstaver
-            typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        // Bestemmer hastigheten på skrivingen/slettingen
-        let typeSpeed = isDeleting ? 100 : 200;
-
-        // Når ordet er ferdig skrevet
-        if (!isDeleting && charIndex === currentWord.length) {
-            typeSpeed = 2000; // Venter litt før sletting
-            isDeleting = true;
-        }
-
-        // Når ordet er ferdig slettet
-        if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typeSpeed = 500; // Venter litt før neste ord
-        }
-
-        setTimeout(type, typeSpeed);
-    }
-
-    // Starter animasjonen
-    type();
-
     console.log('[Menu] Initializing menu functionality...');
     
     // Menu elements
