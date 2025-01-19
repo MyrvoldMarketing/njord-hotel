@@ -178,11 +178,16 @@ body {
 
 .text-content h1 {
     font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 4px;
-    margin: 0;
+    letter-spacing: 2px;
     line-height: 1.2;
-    font-family: 'SaolDisplay', serif;
+    margin: 0;
+    font-weight: normal;
+}
+
+.text-content h1 em {
+    font-family: 'SaolDisplay-LightItalic', serif;
+    font-style: normal; /* Fjerner standard italic styling siden vi bruker egen font */
+    font-weight: 300;
 }
 
 .text-content p {
