@@ -113,4 +113,54 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Hero Slider functionality
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.nav-indicator');
+    let currentSlide = 0;
+
+    function updateSlideIndicators() {
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        updateSlideIndicators();
+        
+        // Reset and play the video in the new active slide
+        const currentVideo = slides[currentSlide].querySelector('video');
+        if (currentVideo) {
+            currentVideo.currentTime = 0;
+            currentVideo.play();
+        }
+    }
+
+    function setupVideoEndListeners() {
+        slides.forEach((slide, index) => {
+            const video = slide.querySelector('video');
+            if (video) {
+                video.addEventListener('ended', () => {
+                    const nextIndex = (index + 1) % slides.length;
+                    goToSlide(nextIndex);
+                });
+            }
+        });
+    }
+
+    // Set up indicator clicks
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            if (index !== currentSlide) {
+                goToSlide(index);
+            }
+        });
+    });
+
+    // Initialize the first slide and set up video listeners
+    setupVideoEndListeners();
+    updateSlideIndicators();
 });
