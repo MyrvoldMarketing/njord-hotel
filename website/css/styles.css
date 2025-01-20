@@ -296,11 +296,11 @@ p {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 30px;
-    padding: 15px 25px;
+    padding: 12px 20px;
     color: #fff;
     cursor: pointer;
     z-index: 1000;  
-    width: 120px;
+    width: 110px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -316,8 +316,8 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 20px;
-    height: 12px;
+    width: 18px;
+    height: 9px;
 }
 
 .hamburger span {
@@ -331,7 +331,7 @@ p {
 
 /* Hamburger to X animation */
 .menu-toggle.active .hamburger span:nth-child(1) {
-    transform: translateY(5.5px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
 }
 
 .menu-toggle.active .hamburger span:nth-child(2) {
@@ -341,7 +341,7 @@ p {
 }
 
 .menu-toggle.active .hamburger span:nth-child(3) {
-    transform: translateY(-5.5px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
 }
 
 /* Menu Overlay */
