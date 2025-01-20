@@ -1270,3 +1270,10 @@ h2 {
 .contact-form .discover-button span {
     text-align: center;
 }
+
+.menu-text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2.5px;
+    color: #fff;
+}
