@@ -229,58 +229,5 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            const indicators = document.querySelectorAll('.nav-indicator');
-            let currentSlide = 0;
-
-            // Legg til click event på hver indikator
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    goToSlide(index);
-                });
-            });
-
-            function goToSlide(n) {
-                // Stopp nåværende video
-                const oldVideo = slides[currentSlide].querySelector('video');
-                if (oldVideo) {
-                    oldVideo.pause();
-                }
-
-                // Remove active classes
-                slides[currentSlide].classList.remove('active');
-                indicators[currentSlide].classList.remove('active');
-                
-                // Update current slide
-                currentSlide = n;
-                
-                // Add active classes
-                slides[currentSlide].classList.add('active');
-                indicators[currentSlide].classList.add('active');
-                
-                // Start ny video
-                const newVideo = slides[currentSlide].querySelector('video');
-                if (newVideo) {
-                    newVideo.currentTime = 0;
-                    newVideo.play();
-                }
-            }
-
-            // Start første slide
-            goToSlide(0);
-
-            // Sett opp video ended events
-            slides.forEach((slide, index) => {
-                const video = slide.querySelector('video');
-                if (video) {
-                    video.addEventListener('ended', () => {
-                        goToSlide((index + 1) % slides.length);
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
