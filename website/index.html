@@ -234,27 +234,59 @@
             const slides = document.querySelectorAll('.slide');
             const indicators = document.querySelectorAll('.nav-indicator');
             let currentSlide = 0;
-            let slideInterval = setInterval(nextSlide, 8000); // Bytt slide hvert 8. sekund
 
             // Legg til click event på hver indikator
             indicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', () => {
-                    clearInterval(slideInterval);
                     goToSlide(index);
-                    slideInterval = setInterval(nextSlide, 8000);
                 });
             });
 
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % slides.length);
-            }
+            // Legg til event listeners på alle videoer
+            slides.forEach((slide, index) => {
+                const video = slide.querySelector('video');
+                if (video) {
+                    // Når en video er ferdig, gå til neste slide
+                    video.addEventListener('ended', () => {
+                        // Restart current video
+                        video.currentTime = 0;
+                        video.play();
+                        // Go to next slide
+                        goToSlide((index + 1) % slides.length);
+                    });
+                }
+            });
 
             function goToSlide(n) {
+                // Pause current video
+                const currentVideo = slides[currentSlide].querySelector('video');
+                if (currentVideo) {
+                    currentVideo.pause();
+                }
+
+                // Remove active classes
                 slides[currentSlide].classList.remove('active');
                 indicators[currentSlide].classList.remove('active');
+                
+                // Update current slide
                 currentSlide = n;
+                
+                // Add active classes
                 slides[currentSlide].classList.add('active');
                 indicators[currentSlide].classList.add('active');
+                
+                // Play new video
+                const newVideo = slides[currentSlide].querySelector('video');
+                if (newVideo) {
+                    newVideo.currentTime = 0;
+                    newVideo.play();
+                }
+            }
+
+            // Start første video
+            const firstVideo = slides[0].querySelector('video');
+            if (firstVideo) {
+                firstVideo.play();
             }
         });
     </script>
