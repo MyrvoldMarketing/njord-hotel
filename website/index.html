@@ -234,11 +234,14 @@
             const slides = document.querySelectorAll('.slide');
             const indicators = document.querySelectorAll('.nav-indicator');
             let currentSlide = 0;
+            let isTransitioning = false;
 
             // Legg til click event på hver indikator
             indicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', () => {
-                    goToSlide(index);
+                    if (!isTransitioning) {
+                        goToSlide(index);
+                    }
                 });
             });
 
@@ -246,13 +249,15 @@
             slides.forEach((slide, index) => {
                 const video = slide.querySelector('video');
                 if (video) {
-                    // Når en video er ferdig, gå til neste slide
                     video.addEventListener('ended', () => {
-                        // Restart current video
-                        video.currentTime = 0;
-                        video.play();
-                        // Go to next slide
-                        goToSlide((index + 1) % slides.length);
+                        if (!isTransitioning) {
+                            isTransitioning = true;
+                            const nextSlide = (index + 1) % slides.length;
+                            goToSlide(nextSlide);
+                            setTimeout(() => {
+                                isTransitioning = false;
+                            }, 100);
+                        }
                     });
                 }
             });
@@ -286,6 +291,7 @@
             // Start første video
             const firstVideo = slides[0].querySelector('video');
             if (firstVideo) {
+                firstVideo.currentTime = 0;
                 firstVideo.play();
             }
         });
