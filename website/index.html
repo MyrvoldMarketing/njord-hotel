@@ -234,39 +234,25 @@
             const slides = document.querySelectorAll('.slide');
             const indicators = document.querySelectorAll('.nav-indicator');
             let currentSlide = 0;
-            let isTransitioning = false;
 
             // Legg til click event på hver indikator
             indicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', () => {
-                    if (!isTransitioning) {
-                        goToSlide(index);
-                    }
+                    goToSlide(index);
                 });
             });
 
-            // Legg til event listeners på alle videoer
-            slides.forEach((slide, index) => {
-                const video = slide.querySelector('video');
-                if (video) {
-                    video.addEventListener('ended', () => {
-                        if (!isTransitioning) {
-                            isTransitioning = true;
-                            const nextSlide = (index + 1) % slides.length;
-                            goToSlide(nextSlide);
-                            setTimeout(() => {
-                                isTransitioning = false;
-                            }, 100);
-                        }
-                    });
-                }
-            });
+            // Funksjon for å gå til neste slide
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % slides.length);
+            }
 
             function goToSlide(n) {
-                // Pause current video
+                // Pause og reset current video
                 const currentVideo = slides[currentSlide].querySelector('video');
                 if (currentVideo) {
                     currentVideo.pause();
+                    currentVideo.currentTime = 0;
                 }
 
                 // Remove active classes
@@ -285,15 +271,14 @@
                 if (newVideo) {
                     newVideo.currentTime = 0;
                     newVideo.play();
+                    
+                    // Add ended event listener
+                    newVideo.onended = nextSlide;
                 }
             }
 
-            // Start første video
-            const firstVideo = slides[0].querySelector('video');
-            if (firstVideo) {
-                firstVideo.currentTime = 0;
-                firstVideo.play();
-            }
+            // Start første slide
+            goToSlide(0);
         });
     </script>
 </body>
