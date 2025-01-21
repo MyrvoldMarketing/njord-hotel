@@ -234,6 +234,7 @@
             const slides = document.querySelectorAll('.slide');
             const indicators = document.querySelectorAll('.nav-indicator');
             let currentSlide = 0;
+            let currentVideo = null;
 
             // Legg til click event på hver indikator
             indicators.forEach((indicator, index) => {
@@ -242,17 +243,12 @@
                 });
             });
 
-            // Funksjon for å gå til neste slide
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % slides.length);
-            }
-
             function goToSlide(n) {
-                // Pause og reset current video
-                const currentVideo = slides[currentSlide].querySelector('video');
+                // Stopp og fjern event listener fra nåværende video
                 if (currentVideo) {
                     currentVideo.pause();
                     currentVideo.currentTime = 0;
+                    currentVideo.onended = null;
                 }
 
                 // Remove active classes
@@ -266,14 +262,15 @@
                 slides[currentSlide].classList.add('active');
                 indicators[currentSlide].classList.add('active');
                 
-                // Play new video
-                const newVideo = slides[currentSlide].querySelector('video');
-                if (newVideo) {
-                    newVideo.currentTime = 0;
-                    newVideo.play();
-                    
-                    // Add ended event listener
-                    newVideo.onended = nextSlide;
+                // Setup new video
+                currentVideo = slides[currentSlide].querySelector('video');
+                if (currentVideo) {
+                    currentVideo.currentTime = 0;
+                    currentVideo.onended = function() {
+                        const nextSlide = (currentSlide + 1) % slides.length;
+                        goToSlide(nextSlide);
+                    };
+                    currentVideo.play();
                 }
             }
 
