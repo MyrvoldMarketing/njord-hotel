@@ -1288,3 +1288,105 @@ h2 {
     letter-spacing: 2.5px;
     color: #fff;
 }
+
+/* Featured Voyages Section */
+.featured-voyages {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.featured-voyages h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'SaolDisplay', serif;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.voyages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.voyage-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.voyage-card:hover {
+    transform: translateY(-5px);
+}
+
+.voyage-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.like-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.like-button:hover {
+    background: #fff;
+}
+
+.like-button svg {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.like-button:hover svg {
+    color: #ff4b4b;
+}
+
+.voyage-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    color: #fff;
+}
+
+.voyage-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+    font-family: 'SaolDisplay', serif;
+}
+
+.voyage-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .voyages-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .voyage-card {
+        margin-bottom: 20px;
+    }
+}
