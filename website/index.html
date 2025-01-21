@@ -234,7 +234,6 @@
             const slides = document.querySelectorAll('.slide');
             const indicators = document.querySelectorAll('.nav-indicator');
             let currentSlide = 0;
-            let currentVideo = null;
 
             // Legg til click event på hver indikator
             indicators.forEach((indicator, index) => {
@@ -244,11 +243,10 @@
             });
 
             function goToSlide(n) {
-                // Stopp og fjern event listener fra nåværende video
-                if (currentVideo) {
-                    currentVideo.pause();
-                    currentVideo.currentTime = 0;
-                    currentVideo.onended = null;
+                // Stopp nåværende video
+                const oldVideo = slides[currentSlide].querySelector('video');
+                if (oldVideo) {
+                    oldVideo.pause();
                 }
 
                 // Remove active classes
@@ -262,20 +260,26 @@
                 slides[currentSlide].classList.add('active');
                 indicators[currentSlide].classList.add('active');
                 
-                // Setup new video
-                currentVideo = slides[currentSlide].querySelector('video');
-                if (currentVideo) {
-                    currentVideo.currentTime = 0;
-                    currentVideo.onended = function() {
-                        const nextSlide = (currentSlide + 1) % slides.length;
-                        goToSlide(nextSlide);
-                    };
-                    currentVideo.play();
+                // Start ny video
+                const newVideo = slides[currentSlide].querySelector('video');
+                if (newVideo) {
+                    newVideo.currentTime = 0;
+                    newVideo.play();
                 }
             }
 
             // Start første slide
             goToSlide(0);
+
+            // Sett opp video ended events
+            slides.forEach((slide, index) => {
+                const video = slide.querySelector('video');
+                if (video) {
+                    video.addEventListener('ended', () => {
+                        goToSlide((index + 1) % slides.length);
+                    });
+                }
+            });
         });
     </script>
 </body>
