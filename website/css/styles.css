@@ -615,8 +615,9 @@ p {
 
 /* Suites Section */
 .suites-section {
-    padding: 100px 0;
-    background: #fff;
+    padding-top: 0;
+    padding-bottom: 40px;
+    background-color: #fff;
     color: #333;
 }
 
@@ -1291,7 +1292,7 @@ h2 {
 
 /* Featured Voyages Section */
 .featured-voyages {
-    padding: 20px 0;
+    padding: 40px 0;
     background-color: #fff;
 }
 
