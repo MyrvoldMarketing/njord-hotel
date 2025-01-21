@@ -126,12 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function goToSlide(index) {
-        // Stopp nåværende video
-        const oldVideo = slides[currentSlide].querySelector('video');
-        if (oldVideo) {
-            oldVideo.pause();
-            oldVideo.currentTime = 0;
-        }
+        // Stopp alle videoer først
+        slides.forEach(slide => {
+            const video = slide.querySelector('video');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        });
 
         // Bytt slide
         slides[currentSlide].classList.remove('active');
@@ -139,30 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
         updateSlideIndicators();
         
-        // Start ny video
-        const newVideo = slides[currentSlide].querySelector('video');
-        if (newVideo) {
-            newVideo.currentTime = 0;
-            newVideo.play();
+        // Start video på aktiv slide
+        const activeVideo = slides[currentSlide].querySelector('video');
+        if (activeVideo) {
+            activeVideo.play();
         }
     }
 
-    function setupVideoEndListeners() {
-        slides.forEach((slide, index) => {
-            const video = slide.querySelector('video');
-            if (video) {
-                // Fjern alle eksisterende event listeners
-                video.replaceWith(video.cloneNode(true));
-                const newVideo = slide.querySelector('video');
-                
-                // Legg til ny event listener
-                newVideo.addEventListener('ended', () => {
-                    const nextIndex = (index + 1) % slides.length;
-                    goToSlide(nextIndex);
-                });
-            }
-        });
-    }
+    // Set up video ended events
+    slides.forEach((slide, index) => {
+        const video = slide.querySelector('video');
+        if (video) {
+            video.addEventListener('ended', () => {
+                const nextIndex = (index + 1) % slides.length;
+                goToSlide(nextIndex);
+            });
+        }
+    });
 
     // Set up indicator clicks
     indicators.forEach((indicator, index) => {
@@ -173,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize the first slide and set up video listeners
+    // Start første slide
     goToSlide(0);
-    setupVideoEndListeners();
 });
