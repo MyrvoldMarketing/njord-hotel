@@ -126,16 +126,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function goToSlide(index) {
+        // Stopp nåværende video
+        const oldVideo = slides[currentSlide].querySelector('video');
+        if (oldVideo) {
+            oldVideo.pause();
+            oldVideo.currentTime = 0;
+        }
+
+        // Bytt slide
         slides[currentSlide].classList.remove('active');
         currentSlide = index;
         slides[currentSlide].classList.add('active');
         updateSlideIndicators();
         
-        // Reset and play the video in the new active slide
-        const currentVideo = slides[currentSlide].querySelector('video');
-        if (currentVideo) {
-            currentVideo.currentTime = 0;
-            currentVideo.play();
+        // Start ny video
+        const newVideo = slides[currentSlide].querySelector('video');
+        if (newVideo) {
+            newVideo.currentTime = 0;
+            newVideo.play();
         }
     }
 
@@ -143,7 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
         slides.forEach((slide, index) => {
             const video = slide.querySelector('video');
             if (video) {
-                video.addEventListener('ended', () => {
+                // Fjern alle eksisterende event listeners
+                video.replaceWith(video.cloneNode(true));
+                const newVideo = slide.querySelector('video');
+                
+                // Legg til ny event listener
+                newVideo.addEventListener('ended', () => {
                     const nextIndex = (index + 1) % slides.length;
                     goToSlide(nextIndex);
                 });
@@ -161,6 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initialize the first slide and set up video listeners
+    goToSlide(0);
     setupVideoEndListeners();
-    updateSlideIndicators();
 });
