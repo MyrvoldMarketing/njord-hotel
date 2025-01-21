@@ -301,7 +301,7 @@ p {
     cursor: pointer;
     z-index: 1000;  
     width: 110px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
 }
 
 .menu-toggle::after {
@@ -372,7 +372,7 @@ p {
     border-radius: 30px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, height 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     margin-bottom: 100px;
     z-index: 999;
@@ -389,7 +389,7 @@ p {
     height: 100%;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease, opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: 40px;
