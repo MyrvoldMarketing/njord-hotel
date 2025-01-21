@@ -73,10 +73,21 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`[Menu] Toggling menu ${show ? 'open' : 'closed'}`);
         
         try {
-            menuToggle.classList.toggle('active', show);
-            menuOverlay.classList.toggle('active', show);
-            menuText.textContent = show ? activeText : defaultText;
-            document.body.style.overflow = show ? 'hidden' : '';
+            if (show) {
+                menuToggle.classList.add('active');
+                menuOverlay.classList.add('active');
+                menuText.textContent = activeText;
+                document.body.style.overflow = 'hidden';
+            } else {
+                menuOverlay.classList.remove('active');
+                menuText.textContent = defaultText;
+                document.body.style.overflow = '';
+                
+                // Vent med å fjerne active-klassen fra toggle-knappen til overlay er skjult
+                setTimeout(() => {
+                    menuToggle.classList.remove('active');
+                }, 300); // Kort forsinkelse for å la overlay-animasjonen starte først
+            }
             
             console.log('[Menu] Menu state updated successfully');
         } catch (error) {
