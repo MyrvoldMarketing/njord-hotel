@@ -317,7 +317,7 @@ p {
 }
 
 .menu-toggle.active {
-    width: 200px;
+    width: 70%;
     max-width: 1200px;
     justify-content: center;
     border-radius: 30px;
@@ -362,7 +362,7 @@ p {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 70%;
     max-width: 1200px;
     height: 0;
     background: rgba(20, 20, 20, 0.7);
