@@ -889,13 +889,15 @@ h2 {
     position: relative;
     flex: 1;
     margin: 0 10px;
+    display: flex;
+    align-items: center;
 }
 
 .required {
     color: red;
-    position: absolute;
-    left: -10px;
-    top: 12px;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .form-group input,
