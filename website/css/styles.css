@@ -191,8 +191,12 @@ body {
 }
 
 .text-content p {
-    font-size: 0.75rem;
-    font-family: 'helvetica', serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 0.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
 }
 
 .light-italic {
@@ -258,10 +262,10 @@ body {
 /* Global paragraph style */
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.75rem;
+    font-size: 1rem;
     line-height: 1.4;
     margin-top: 0.1rem;
-    font-weight: 350;
+    font-weight: 400;
     margin-bottom: 1.5rem;
 }
 
