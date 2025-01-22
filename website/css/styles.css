@@ -192,7 +192,6 @@ body {
 
 .text-content p {
     font-size: 0.75rem;
-    letter-spacing: 0.2rem;
     font-family: 'helvetica', serif;
 }
 
@@ -259,10 +258,10 @@ body {
 /* Global paragraph style */
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1rem;
+    font-size: 0.75rem;
     line-height: 1.4;
     margin-top: 0.1rem;
-    font-weight: 400;
+    font-weight: 350;
     margin-bottom: 1.5rem;
 }
 
