@@ -971,6 +971,9 @@ h2 {
 
 .checkbox-group {
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .checkbox-group label {
@@ -980,10 +983,6 @@ h2 {
     font-size: 14px;
     line-height: 1.2;
     color: #666;
-    margin-bottom: 16px;
-}
-
-.checkbox-group label:last-child {
     margin-bottom: 0;
 }
 
