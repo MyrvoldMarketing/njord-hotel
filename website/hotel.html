@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Njord Hotell - Hotellet</title>
+    <link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .hotel-section {
+            padding: 100px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .hotel-title {
+            font-family: 'SaolDisplay', serif;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .hotel-description {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+            color: #333;
+        }
+
+        .hotel-stats {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'SaolDisplay', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .hotel-plans {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .plans-title {
+            font-family: 'SaolDisplay', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .plans-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .plan-link {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 15px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .plan-link.active {
+            border-bottom-color: #333;
+        }
+
+        .floor-plan-image {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Reusing the same menu toggle from index -->
+    <button class="menu-toggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="menu-text" data-text-default="MENY" data-text-active="STÄNG">MENY</span>
+    </button>
+
+    <section class="hotel-section">
+        <h1 class="hotel-title">NJORD HOTEL</h1>
+        <p class="hotel-description">
+            Varje värd har en inredning inspirerad av havet, dess råa skönhet och unika fridfulla känsla från skandinavisk kultur. Som våra definitioner av modern lyx utvecklas har arkitekter och formgivare strävat efter att kombinera dessa beståndsdelar med att skapa något unikt. Njut av spa-liknande badrum, designat utifrån bästa bekvämlighet, nyttiga privata terrasser och storslagen panoramautsikt genom golv-till-tak-fönster.
+        </p>
+
+        <div class="hotel-stats">
+            <div class="stat-item">
+                <div class="stat-number">30,000 m<sup>2</sup></div>
+                <div class="stat-label">Area</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">124</div>
+                <div class="stat-label">Rum</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">40 m<sup>2</sup></div>
+                <div class="stat-label">medelstorlek på rum</div>
+            </div>
+        </div>
+
+        <div class="hotel-plans">
+            <h2 class="plans-title">ENHETSDETALJER</h2>
+            <p class="hotel-description">Upptäck</p>
+            <div class="plans-nav">
+                <a href="#" class="plan-link">LÄGENHETS PLAN</a>
+                <a href="#" class="plan-link active">HOTEL PLAN</a>
+            </div>
+            <div class="floor-plans">
+                <div class="plan-tabs">
+                    <a href="#" class="plan-link">PLAN -1</a>
+                    <a href="#" class="plan-link active">PLAN 0</a>
+                    <a href="#" class="plan-link">PLAN 1</a>
+                    <a href="#" class="plan-link">PLAN 2</a>
+                    <a href="#" class="plan-link">PLAN 3</a>
+                    <a href="#" class="plan-link">PLAN 4</a>
+                </div>
+                <div class="floor-plan-image">
+                    <!-- Placeholder for floor plan image -->
+                    <img src="assets/floor-plan.png" alt="Hotel Floor Plan" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reuse the menu overlay from index -->
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-header">
+                <div class="menu-actions">
+                    <a href="#" class="sign-in">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+                        </svg>
+                        SIGN IN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
