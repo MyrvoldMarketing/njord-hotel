@@ -1390,6 +1390,17 @@ h2 {
     margin: 0 auto;
     display: flex;
     gap: 5rem;
+    position: relative;
+}
+
+.tab-navigation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.25px;
+    background: rgba(0,0,0,0.2);
 }
 
 .tab-link {
@@ -1398,11 +1409,11 @@ h2 {
     color: #333;
     display: inline-block;
     padding-bottom: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     position: relative;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .tab-link.active {
@@ -1430,17 +1441,6 @@ h2 {
 .floor-tabs .tab-link {
     padding-bottom: 0.5rem;
     margin: 0 1.5rem;
-}
-
-.tab-container::after,
-.floor-tabs::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0.25px;
-    background: rgba(0,0,0,0.2);
 }
 
 .floor-plan-container {
