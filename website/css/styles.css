@@ -1350,7 +1350,7 @@ h2 {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 0.9rem;
     text-transform: uppercase;
-    margin-bottom: 0.625rem;
+    margin-bottom: 1.5rem;
 }
 
 .section-title {
@@ -1361,8 +1361,8 @@ h2 {
 }
 
 .section-description {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.1rem;
+    font-family: 'SaolDisplay', serif;
+    font-size: 1em;
     margin-bottom: 2.5rem;
 }
 
