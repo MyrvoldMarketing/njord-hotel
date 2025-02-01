@@ -1371,22 +1371,18 @@ h2 {
     margin-bottom: 2.5rem;
 }
 
-.tab-navigation {
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    position: relative;
+.section-description {
+    margin-bottom: 4rem;
 }
 
-.tab-navigation::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: #ddd;
+.tab-navigation {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tab-link {
@@ -1395,10 +1391,11 @@ h2 {
     color: #333;
     display: inline-block;
     padding: 0.5rem 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     position: relative;
+    font-weight: 300;
 }
 
 .tab-link.active {
@@ -1411,25 +1408,13 @@ h2 {
     bottom: -1px;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 0.5px;
     background: #000;
-    z-index: 1;
 }
 
 .floor-tabs {
-    margin: 2rem 0;
+    margin-top: 0.5rem;
     text-align: center;
-    position: relative;
-}
-
-.floor-tabs::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: #ddd;
 }
 
 .floor-tabs-inner {
