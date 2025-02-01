@@ -1338,6 +1338,66 @@ h2 {
     top: 20px;
     right: 20px;
     background: rgba(255, 255, 255, 0.9);
+}
+
+/* Hotel Page Styles */
+.section-header {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.section-subtitle {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.625rem;
+}
+
+.section-title {
+    font-family: 'SaolDisplay', serif;
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 0 0 2.5rem;
+}
+
+.section-description {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.tab-navigation {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.875rem;
+}
+
+.tab-link {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    margin: 0 0.625rem;
+}
+
+.tab-link.active {
+    border-bottom: 2px solid #333;
+}
+
+.floor-tabs {
+    margin-bottom: 1.875rem;
+    text-align: center;
+}
+
+.floor-plan-container {
+    max-width: 62.5rem;
+    margin: 0 auto;
+}
+
+.floor-plan-image {
+    width: 100%;
+    height: auto;
+}
     border-radius: 50%;
     width: 40px;
     height: 40px;
