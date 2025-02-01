@@ -1372,8 +1372,21 @@ h2 {
 }
 
 .tab-navigation {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 1.875rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.tab-navigation::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #ddd;
 }
 
 .tab-link {
@@ -1381,19 +1394,47 @@ h2 {
     text-decoration: none;
     color: #333;
     display: inline-block;
-    padding: 0.625rem 1.875rem;
-    margin: 0 0.625rem;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    position: relative;
 }
 
 .tab-link.active {
-    border-bottom: 2px solid #333;
+    color: #000;
+}
+
+.tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #000;
+    z-index: 1;
 }
 
 .floor-tabs {
-    margin-bottom: 1.875rem;
+    margin: 2rem 0;
     text-align: center;
+    position: relative;
+}
+
+.floor-tabs::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+.floor-tabs-inner {
+    display: inline-flex;
+    gap: 2rem;
 }
 
 .floor-plan-container {
