@@ -143,33 +143,30 @@
             </div>
             
             <div class="floor-tabs">
-                <a href="#" class="tab-link active" data-plan="-1">PLAN -1</a>
-                <a href="#" class="tab-link" data-plan="0">PLAN 0</a>
-                <a href="#" class="tab-link" data-plan="1">PLAN 1</a>
-                <a href="#" class="tab-link" data-plan="2">PLAN 2</a>
-                <a href="#" class="tab-link" data-plan="3">PLAN 3</a>
-                <a href="#" class="tab-link" data-plan="4">PLAN 4</a>
+                <a onclick="showPlan('-1')" href="#" class="tab-link active">PLAN -1</a>
+                <a onclick="showPlan('0')" href="#" class="tab-link">PLAN 0</a>
+                <a onclick="showPlan('1')" href="#" class="tab-link">PLAN 1</a>
+                <a onclick="showPlan('2')" href="#" class="tab-link">PLAN 2</a>
+                <a onclick="showPlan('3')" href="#" class="tab-link">PLAN 3</a>
+                <a onclick="showPlan('4')" href="#" class="tab-link">PLAN 4</a>
             </div>
                 <div>
                     <img src="assets/Hotel/Hotel-plan-minus-1.png" alt="Plan -1" class="floor-plan-image" id="floorPlanImage">
                 </div>
             <script>
-                // Håndter klikk på plan-knappene
-                const planButtons = document.querySelectorAll('.floor-tabs .tab-link[data-plan]');
-                planButtons.forEach(button => {
-                    button.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        // Remove active class from all plan buttons
-                        planButtons.forEach(btn => btn.classList.remove('active'));
-                        // Add active class to clicked button
-                        button.classList.add('active');
-                        // Update image
-                        const plan = button.getAttribute('data-plan');
-                        const image = document.getElementById('floorPlanImage');
-                        image.src = plan === '-1' ? 'assets/Hotel/Hotel-plan-minus-1.png' : `assets/Hotel/Hotel-plan-${plan}.png`;
-                        image.alt = `Plan ${plan}`;
-                    });
-                });
+                function showPlan(plan) {
+                    // Fjern active fra alle
+                    document.querySelectorAll('.floor-tabs .tab-link').forEach(tab => tab.classList.remove('active'));
+                    // Sett active på den som ble klikket
+                    event.target.classList.add('active');
+                    // Vis riktig bilde
+                    const image = document.getElementById('floorPlanImage');
+                    if (plan === '-1') {
+                        image.src = 'assets/Hotel/Hotel-plan-minus-1.png';
+                    } else {
+                        image.src = 'assets/Hotel/Hotel-plan-' + plan + '.png';
+                    }
+                }
             </script>
             </div>
         </div>
