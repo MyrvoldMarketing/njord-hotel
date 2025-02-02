@@ -154,15 +154,17 @@
                     <img src="assets/Hotel/Hotel-plan-minus-1.png" alt="Plan -1" class="floor-plan-image" id="floorPlanImage">
                 </div>
             <script>
-                document.querySelectorAll('.floor-tabs .tab-link').forEach(tab => {
-                    tab.addEventListener('click', (e) => {
+                // Håndter klikk på plan-knappene
+                const planButtons = document.querySelectorAll('.floor-tabs .tab-link[data-plan]');
+                planButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
                         e.preventDefault();
-                        // Remove active class from all tabs
-                        document.querySelectorAll('.floor-tabs .tab-link').forEach(t => t.classList.remove('active'));
-                        // Add active class to clicked tab
-                        tab.classList.add('active');
+                        // Remove active class from all plan buttons
+                        planButtons.forEach(btn => btn.classList.remove('active'));
+                        // Add active class to clicked button
+                        button.classList.add('active');
                         // Update image
-                        const plan = tab.getAttribute('data-plan');
+                        const plan = button.getAttribute('data-plan');
                         const image = document.getElementById('floorPlanImage');
                         image.src = plan === '-1' ? 'assets/Hotel/Hotel-plan-minus-1.png' : `assets/Hotel/Hotel-plan-${plan}.png`;
                         image.alt = `Plan ${plan}`;
