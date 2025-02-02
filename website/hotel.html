@@ -143,30 +143,31 @@
             </div>
             
             <div class="floor-tabs">
-                <a onclick="showPlan('-1')" href="#" class="tab-link active">PLAN -1</a>
-                <a onclick="showPlan('0')" href="#" class="tab-link">PLAN 0</a>
-                <a onclick="showPlan('1')" href="#" class="tab-link">PLAN 1</a>
-                <a onclick="showPlan('2')" href="#" class="tab-link">PLAN 2</a>
-                <a onclick="showPlan('3')" href="#" class="tab-link">PLAN 3</a>
-                <a onclick="showPlan('4')" href="#" class="tab-link">PLAN 4</a>
+                <a href="#" class="tab-link active">PLAN -1</a>
+                <a href="#" class="tab-link">PLAN 0</a>
+                <a href="#" class="tab-link">PLAN 1</a>
+                <a href="#" class="tab-link">PLAN 2</a>
+                <a href="#" class="tab-link">PLAN 3</a>
+                <a href="#" class="tab-link">PLAN 4</a>
             </div>
-                <div>
-                    <img src="assets/Hotel/Hotel-plan-minus-1.png" alt="Plan -1" class="floor-plan-image" id="floorPlanImage">
-                </div>
+            <div class="plan-images">
+                <img src="assets/Hotel/Hotel-plan-minus-1.png" alt="Plan -1" class="plan-image active">
+                <img src="assets/Hotel/Hotel-plan-0.png" alt="Plan 0" class="plan-image">
+                <img src="assets/Hotel/Hotel-plan-1.png" alt="Plan 1" class="plan-image">
+                <img src="assets/Hotel/Hotel-plan-2.png" alt="Plan 2" class="plan-image">
+                <img src="assets/Hotel/Hotel-plan-3.png" alt="Plan 3" class="plan-image">
+                <img src="assets/Hotel/Hotel-plan-4.png" alt="Plan 4" class="plan-image">
+            </div>
             <script>
-                function showPlan(plan) {
-                    // Fjern active fra alle
-                    document.querySelectorAll('.floor-tabs .tab-link').forEach(tab => tab.classList.remove('active'));
-                    // Sett active på den som ble klikket
-                    event.target.classList.add('active');
-                    // Vis riktig bilde
-                    const image = document.getElementById('floorPlanImage');
-                    if (plan === '-1') {
-                        image.src = 'assets/Hotel/Hotel-plan-minus-1.png';
-                    } else {
-                        image.src = 'assets/Hotel/Hotel-plan-' + plan + '.png';
-                    }
-                }
+                document.querySelectorAll('.floor-tabs .tab-link').forEach((link, index) => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        document.querySelectorAll('.plan-image').forEach(img => img.classList.remove('active'));
+                        document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
+                        document.querySelectorAll('.plan-image')[index].classList.add('active');
+                        link.classList.add('active');
+                    });
+                });
             </script>
             </div>
         </div>

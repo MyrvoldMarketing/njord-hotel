@@ -82,6 +82,17 @@ body {
     color: #007bff;
 }
 
+/* Plan Images */
+.plan-image {
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.plan-image.active {
+    display: block;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
