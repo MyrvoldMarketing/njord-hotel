@@ -150,29 +150,64 @@ body {
     margin-bottom: 40px;
 }
 
-.tab-navigation {
-    margin-bottom: 30px;
+/* Plan Type Navigation */
+.plan-types {
+    text-align: center;
 }
 
-.tab-navigation .tab-link,
+.tab-navigation {
+    margin-bottom: 30px;
+    display: inline-flex;
+    gap: 30px;
+}
+
+.tab-navigation .tab-link {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-navigation .tab-link.active {
+    border-bottom-color: #333;
+}
+
+/* Floor Tabs */
+.floor-tabs {
+    margin: 30px 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
 .floor-tabs .tab-link {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     text-decoration: none;
     color: #333;
     padding: 5px 15px;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-.tab-navigation .tab-link.active,
 .floor-tabs .tab-link.active {
     border-bottom-color: #333;
 }
 
+/* Plan Images */
+.plan-section {
+    margin-top: 30px;
+}
+
+.plan-images {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .plan-image {
     display: none;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
 }
 
 .plan-image.active {

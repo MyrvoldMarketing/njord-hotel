@@ -173,33 +173,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Plan type switching functionality
     const planTypeTabs = document.querySelectorAll('.tab-navigation .tab-link');
+    const planSections = document.querySelectorAll('.plan-section');
+
     planTypeTabs.forEach(tab => {
         tab.addEventListener('click', function(e) {
             e.preventDefault();
+            
+            // Get the plan type from data attribute
+            const planType = this.dataset.planType;
             
             // Remove active class from all plan type tabs
             planTypeTabs.forEach(t => t.classList.remove('active'));
             
             // Add active class to clicked tab
             this.classList.add('active');
+            
+            // Hide all plan sections and show the selected one
+            planSections.forEach(section => {
+                if (section.classList.contains(planType + '-plans')) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
         });
     });
 
     // Floor plan switching functionality
-    const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
-    floorTabs.forEach((tab, index) => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all floor tabs and images
-            floorTabs.forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.plan-image').forEach(img => img.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Show corresponding image
-            document.querySelectorAll('.plan-image')[index].classList.add('active');
+    const floorTabsContainers = document.querySelectorAll('.floor-tabs');
+    
+    floorTabsContainers.forEach(container => {
+        const tabs = container.querySelectorAll('.tab-link');
+        const planSection = container.closest('.plan-section');
+        const images = planSection.querySelectorAll('.plan-image');
+        
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all floor tabs and images in this section
+                tabs.forEach(t => t.classList.remove('active'));
+                images.forEach(img => img.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding image
+                this.classList.add('active');
+                images[index].classList.add('active');
+            });
         });
     });
 });
