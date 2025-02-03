@@ -171,6 +171,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start første slide
     goToSlide(0);
 
+    // Plan type switching functionality
+    const planTypeTabs = document.querySelectorAll('.tab-navigation .tab-link');
+    planTypeTabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all plan type tabs
+            planTypeTabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+        });
+    });
+
     // Floor plan switching functionality
     const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
     floorTabs.forEach((tab, index) => {

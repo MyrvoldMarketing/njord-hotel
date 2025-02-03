@@ -150,6 +150,11 @@ body {
     margin-bottom: 40px;
 }
 
+.tab-navigation {
+    margin-bottom: 30px;
+}
+
+.tab-navigation .tab-link,
 .floor-tabs .tab-link {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     text-decoration: none;
@@ -159,6 +164,7 @@ body {
     transition: border-color 0.3s;
 }
 
+.tab-navigation .tab-link.active,
 .floor-tabs .tab-link.active {
     border-bottom-color: #333;
 }
@@ -167,10 +173,6 @@ body {
     display: none;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.plan-image.active {
-    display: block;
 }
 
 .plan-image.active {
