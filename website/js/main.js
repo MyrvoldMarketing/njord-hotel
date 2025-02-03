@@ -172,20 +172,47 @@ document.addEventListener('DOMContentLoaded', () => {
     goToSlide(0);
 
     // Floor plan switching functionality
-    const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
-    const planImages = document.querySelectorAll('.plan-image');
-    
-    floorTabs.forEach((tab, index) => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all floor tabs and images
-            floorTabs.forEach(t => t.classList.remove('active'));
+    function initPlanSwitching() {
+        const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
+        const planImages = document.querySelectorAll('.plan-image');
+
+        if (!floorTabs.length || !planImages.length) {
+            console.warn('Plan switching elements not found');
+            return;
+        }
+
+        if (floorTabs.length !== planImages.length) {
+            console.error('Mismatch between number of tabs and images');
+            return;
+        }
+
+        function switchPlan(index) {
+            // Remove active class from all elements
+            floorTabs.forEach(tab => tab.classList.remove('active'));
             planImages.forEach(img => img.classList.remove('active'));
-            
-            // Add active class to clicked tab and corresponding image
-            this.classList.add('active');
+
+            // Add active class to selected elements
+            floorTabs[index].classList.add('active');
             planImages[index].classList.add('active');
+        }
+
+        // Add click handlers to tabs
+        floorTabs.forEach((tab, index) => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchPlan(index);
+            });
         });
-    });
+
+        // Ensure initial state is correct
+        const activeIndex = Array.from(floorTabs).findIndex(tab => tab.classList.contains('active'));
+        if (activeIndex === -1) {
+            switchPlan(0);
+        } else {
+            switchPlan(activeIndex);
+        }
+    }
+
+    // Initialize plan switching
+    initPlanSwitching();
 });
