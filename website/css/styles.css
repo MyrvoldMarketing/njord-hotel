@@ -1503,6 +1503,7 @@ h2 {
     background: rgba(0,0,0,0.2);
 }
 
+
 .tab-link {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     text-decoration: none;
@@ -1551,15 +1552,6 @@ h2 {
 .floor-plan-image {
     width: 100%;
     height: auto;
-}
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .like-button:hover {

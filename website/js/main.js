@@ -171,21 +171,61 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start første slide
     goToSlide(0);
 
-    // Floor plan switching functionality
-    const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
-    floorTabs.forEach((tab, index) => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all floor tabs and images
-            floorTabs.forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.plan-image').forEach(img => img.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Show corresponding image
-            document.querySelectorAll('.plan-image')[index].classList.add('active');
+    document.addEventListener('DOMContentLoaded', () => {
+        // Plan type switching (Lägenhets/Hotel)
+        const planTypeLinks = document.querySelectorAll('.tab-navigation .tab-link');
+        const planTypes = {
+            'LÄGENHETS PLAN': 'Lagenhet',
+            'HOTEL PLAN': 'Hotel'
+        };
+    
+        planTypeLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all type links
+                planTypeLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Get the current plan type
+                const planType = this.textContent.trim();
+                
+                // Update image sources based on plan type
+                const images = document.querySelectorAll('.plan-image');
+                images.forEach((img, index) => {
+                    const planNumber = index - 1; // Since we start at -1
+                    img.src = `assets/${planTypes[planType]}/${planTypes[planType]}-plan-${planNumber}.jpg`;
+                });
+            });
         });
+    
+        // Floor plan switching
+        const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
+        const planImages = document.querySelectorAll('.plan-image');
+    
+        floorTabs.forEach((tab, index) => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all floor tabs and images
+                floorTabs.forEach(t => t.classList.remove('active'));
+                planImages.forEach(img => img.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding image
+                if (planImages[index]) {
+                    planImages[index].classList.add('active');
+                }
+            });
+        });
+    
+        // Ensure first images are shown by default
+        if (planImages.length > 0) {
+            planImages[0].classList.add('active');
+        }
     });
 });
