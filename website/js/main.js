@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Floor plan switching
     const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
-    const planImages = document.querySelectorAll('.plan-image');
+    const planImages = document.querySelectorAll('.plan-images img');
 
     floorTabs.forEach((tab, index) => {
         tab.addEventListener('click', function(e) {
