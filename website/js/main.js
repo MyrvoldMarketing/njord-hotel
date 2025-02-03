@@ -171,48 +171,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start første slide
     goToSlide(0);
 
-    // Floor plan switching functionality
-    function initPlanSwitching() {
-        const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
-        const planImages = document.querySelectorAll('.plan-image');
-
-        if (!floorTabs.length || !planImages.length) {
-            console.warn('Plan switching elements not found');
-            return;
-        }
-
-        if (floorTabs.length !== planImages.length) {
-            console.error('Mismatch between number of tabs and images');
-            return;
-        }
-
-        function switchPlan(index) {
-            // Remove active class from all elements
-            floorTabs.forEach(tab => tab.classList.remove('active'));
-            planImages.forEach(img => img.classList.remove('active'));
-
-            // Add active class to selected elements
-            floorTabs[index].classList.add('active');
-            planImages[index].classList.add('active');
-        }
-
-        // Add click handlers to tabs
-        floorTabs.forEach((tab, index) => {
-            tab.addEventListener('click', (e) => {
-                e.preventDefault();
-                switchPlan(index);
-            });
+    // Plan type switching
+    const planTypeTabs = document.querySelectorAll('.tab-navigation .tab-link');
+    planTypeTabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            planTypeTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
         });
+    });
 
-        // Ensure initial state is correct
-        const activeIndex = Array.from(floorTabs).findIndex(tab => tab.classList.contains('active'));
-        if (activeIndex === -1) {
-            switchPlan(0);
-        } else {
-            switchPlan(activeIndex);
-        }
-    }
+    // Floor plan switching
+    const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
+    const planImages = document.querySelectorAll('.plan-image');
 
-    // Initialize plan switching
-    initPlanSwitching();
+    floorTabs.forEach((tab, index) => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all tabs and images
+            floorTabs.forEach(t => t.classList.remove('active'));
+            planImages.forEach(img => img.classList.remove('active'));
+            
+            // Add active class to clicked tab and its image
+            this.classList.add('active');
+            planImages[index].classList.add('active');
+        });
+    });
 });
