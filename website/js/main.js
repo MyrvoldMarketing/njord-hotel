@@ -171,15 +171,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start første slide
     goToSlide(0);
 
-    // Plan switching functionality
-    const planTabs = document.querySelectorAll('.floor-tabs .tab-link');
-    
-    planTabs.forEach((tab, index) => {
+    // Plan type switching functionality
+    const typeTabs = document.querySelectorAll('.plan-type-tabs .type-tab');
+    typeTabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            typeTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            // Her kan vi legge til logikk for å bytte mellom leilighet/hotell bilder
+        });
+    });
+
+    // Floor plan switching functionality
+    const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
+    floorTabs.forEach((tab, index) => {
         tab.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Remove active class from all tabs and images
-            document.querySelectorAll('.tab-link').forEach(t => t.classList.remove('active'));
+            // Remove active class from all floor tabs and images
+            floorTabs.forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.plan-image').forEach(img => img.classList.remove('active'));
             
             // Add active class to clicked tab

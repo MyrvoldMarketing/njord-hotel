@@ -135,6 +135,26 @@ body {
     text-align: center;
 }
 
+.plan-type-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.type-tab {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.type-tab.active {
+    border-bottom-color: #333;
+}
+
 .plans-title {
     font-family: 'SaolDisplay', serif;
     font-size: 2rem;
@@ -161,9 +181,14 @@ body {
     border-bottom-color: #333;
 }
 
-.floor-plan-image {
+.plan-image {
+    display: none;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.plan-image.active {
+    display: block;
 }
 
 /* Hero Section */
