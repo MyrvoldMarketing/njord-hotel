@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Floor plan switching
     const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
-    const planImages = document.querySelectorAll('.plan-image');
+    const planImages = document.querySelectorAll('.plan-images .plan-image');
 
     floorTabs.forEach((tab, index) => {
         tab.addEventListener('click', function(e) {
@@ -195,9 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Add active class to clicked tab and its image
             this.classList.add('active');
-            if (planImages[index]) {
-                planImages[index].classList.add('active');
-            }
+            planImages[index].classList.add('active');
         });
     });
 });

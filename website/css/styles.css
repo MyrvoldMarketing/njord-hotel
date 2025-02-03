@@ -167,6 +167,11 @@ body {
     cursor: pointer;
 }
 
+.tab-navigation .tab-link:hover,
+.floor-tabs .tab-link:hover {
+    border-bottom-color: #666;
+}
+
 .tab-navigation .tab-link.active,
 .floor-tabs .tab-link.active {
     border-bottom-color: #333;
@@ -176,6 +181,9 @@ body {
 .floor-tabs {
     text-align: center;
     margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Plan Images */
