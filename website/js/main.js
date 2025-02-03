@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Plan type switching (Lägenhets/Hotel)
         const planTypeLinks = document.querySelectorAll('.tab-navigation .tab-link');
         const planTypes = {
-            'LÄGENHETS PLAN': 'Lagenhet',
+            'HOTELRUM': 'Hotelrum',
             'HOTEL PLAN': 'Hotel'
         };
     
@@ -219,6 +219,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Add active class to clicked link
                 this.classList.add('active');
+
+                // Show/hide appropriate tabs
+                const hotelrumTabs = document.querySelector('.hotelrum-tabs');
+                const floorTabs = document.querySelector('.floor-tabs');
+                
+                if (this.textContent === 'HOTELRUM') {
+                    hotelrumTabs.style.display = 'block';
+                    floorTabs.style.display = 'none';
+                } else {
+                    hotelrumTabs.style.display = 'none';
+                    floorTabs.style.display = 'block';
+                }
                 
                 // Get the current plan type
                 const planType = this.textContent.trim();
