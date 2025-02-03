@@ -1432,6 +1432,15 @@ h2 {
 }
 
 /* Hotel Page Styles */
+
+.plan-image {
+    display: none;
+}
+
+.plan-image.active {
+    display: block;
+}
+
 .section-header {
     text-align: center;
     padding: 5rem 0;
