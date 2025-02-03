@@ -171,17 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start første slide
     goToSlide(0);
 
-    // Plan type switching functionality
-    const typeTabs = document.querySelectorAll('.plan-type-tabs .type-tab');
-    typeTabs.forEach(tab => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            typeTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-            // Her kan vi legge til logikk for å bytte mellom leilighet/hotell bilder
-        });
-    });
-
     // Floor plan switching functionality
     const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
     floorTabs.forEach((tab, index) => {
