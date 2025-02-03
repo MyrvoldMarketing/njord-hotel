@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Update image sources based on plan type
                 const images = document.querySelectorAll('.plan-image');
                 images.forEach((img, index) => {
-                    const planNumber = index - 1; // Since we start at -1
+                    const planNumber = index + 1; // Since we start at 1
                     img.src = `assets/${planTypes[planType]}/${planTypes[planType]}-plan-${planNumber}.jpg`;
                 });
             });
@@ -219,6 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Show corresponding image
                 if (planImages[index]) {
                     planImages[index].classList.add('active');
+                } else {
+                    planImages[0].classList.add('active');
                 }
             });
         });
