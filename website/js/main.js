@@ -209,6 +209,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'HOTEL PLAN': 'Hotel'
     };
 
+    // Handle hotelrum tab clicks
+    const hotelrumTabs = document.querySelectorAll('.hotelrum-tabs .tab-link');
+    hotelrumTabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            hotelrumTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
     planTypeLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();

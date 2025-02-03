@@ -1531,7 +1531,7 @@ h2 {
     background: #000;
 }
 
-.floor-tabs {
+.floor-tabs, .hotelrum-tabs {
     position: relative;
     width: 100%;
     text-align: center;
@@ -1539,9 +1539,28 @@ h2 {
     margin-bottom: 3rem;
 }
 
-.floor-tabs .tab-link {
+.floor-tabs .tab-link, .hotelrum-tabs .tab-link {
     padding-bottom: 0.5rem;
     margin: 0 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.floor-tabs .tab-link.active, .hotelrum-tabs .tab-link.active {
+    color: #333;
+}
+
+.floor-tabs .tab-link.active::after, .hotelrum-tabs .tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
 }
 
 .floor-plan-container {
