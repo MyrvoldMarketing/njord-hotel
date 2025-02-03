@@ -173,46 +173,37 @@ document.addEventListener('DOMContentLoaded', () => {
         goToSlide(0);
     }
 
-    // Floor plan switching
-    const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
-    floorTabs.forEach((tab, index) => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all floor tabs
-            floorTabs.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Show corresponding image
-            const planImages = document.querySelectorAll('.hotel-plan-images .plan-image');
-            planImages.forEach(img => img.classList.remove('active'));
-            if (planImages[index]) {
-                planImages[index].classList.add('active');
-            }
+    // Floor plan and hotelrum switching
+    function setupTabSwitching(tabsSelector, imagesContainerSelector) {
+        const tabs = document.querySelectorAll(tabsSelector);
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding image
+                const images = document.querySelectorAll(`${imagesContainerSelector} .plan-image`);
+                images.forEach(img => img.classList.remove('active'));
+                if (images[index]) {
+                    images[index].classList.add('active');
+                }
+            });
         });
-    });
+    }
+
+    // Set up floor plan switching
+    setupTabSwitching('.floor-tabs .tab-link', '.hotel-plan-images');
+
+    // Set up hotelrum switching
+    setupTabSwitching('.hotelrum-tabs .tab-link', '.hotelrum-images');
 
     // Plan type switching (Hotelrum/Hotel)
     const planTypeLinks = document.querySelectorAll('.tab-navigation .tab-link');
-
-    // Handle hotelrum tab clicks
-    const hotelrumTabs = document.querySelectorAll('.hotelrum-tabs .tab-link');
-    hotelrumTabs.forEach((tab, index) => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            hotelrumTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-
-            // Show corresponding room image
-            const roomImages = document.querySelectorAll('.hotelrum-images .plan-image');
-            roomImages.forEach(img => img.classList.remove('active'));
-            if (roomImages[index]) {
-                roomImages[index].classList.add('active');
-            }
-        });
-    });
 
     planTypeLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -237,30 +228,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 hotelPlanImages.style.display = 'none';
                 hotelrumImages.style.display = 'block';
 
-                // Show first room image and tab by default
-                const roomImages = document.querySelectorAll('.hotelrum-images .plan-image');
+                // Activate first hotelrum tab and image
                 const firstHotelrumTab = document.querySelector('.hotelrum-tabs .tab-link');
-                
-                roomImages.forEach(img => img.classList.remove('active'));
-                hotelrumTabs.forEach(t => t.classList.remove('active'));
-                
-                if (roomImages[0]) roomImages[0].classList.add('active');
-                if (firstHotelrumTab) firstHotelrumTab.classList.add('active');
+                if (firstHotelrumTab) {
+                    firstHotelrumTab.click();
+                }
             } else {
                 hotelrumTabs.style.display = 'none';
                 floorTabs.style.display = 'block';
                 hotelPlanImages.style.display = 'block';
                 hotelrumImages.style.display = 'none';
 
-                // Show first floor plan image and tab by default
-                const planImages = document.querySelectorAll('.hotel-plan-images .plan-image');
+                // Activate first floor plan tab and image
                 const firstFloorTab = document.querySelector('.floor-tabs .tab-link');
-                
-                planImages.forEach(img => img.classList.remove('active'));
-                floorTabs.forEach(t => t.classList.remove('active'));
-                
-                if (planImages[0]) planImages[0].classList.add('active');
-                if (firstFloorTab) firstFloorTab.classList.add('active');
+                if (firstFloorTab) {
+                    firstFloorTab.click();
+                }
             }
             
             // Get the current plan type
