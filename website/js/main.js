@@ -202,45 +202,43 @@ document.addEventListener('DOMContentLoaded', () => {
         planImages[0].classList.add('active');
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        // Plan type switching (Lägenhets/Hotel)
-        const planTypeLinks = document.querySelectorAll('.tab-navigation .tab-link');
-        const planTypes = {
-            'HOTELRUM': 'Hotelrum',
-            'HOTEL PLAN': 'Hotel'
-        };
-    
-        planTypeLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Remove active class from all type links
-                planTypeLinks.forEach(l => l.classList.remove('active'));
-                
-                // Add active class to clicked link
-                this.classList.add('active');
+    // Plan type switching (Hotelrum/Hotel)
+    const planTypeLinks = document.querySelectorAll('.tab-navigation .tab-link');
+    const planTypes = {
+        'HOTELRUM': 'Hotelrum',
+        'HOTEL PLAN': 'Hotel'
+    };
 
-                // Show/hide appropriate tabs
-                const hotelrumTabs = document.querySelector('.hotelrum-tabs');
-                const floorTabs = document.querySelector('.floor-tabs');
-                
-                if (this.textContent === 'HOTELRUM') {
-                    hotelrumTabs.style.display = 'block';
-                    floorTabs.style.display = 'none';
-                } else {
-                    hotelrumTabs.style.display = 'none';
-                    floorTabs.style.display = 'block';
-                }
-                
-                // Get the current plan type
-                const planType = this.textContent.trim();
-                
-                // Update image sources based on plan type
-                const images = document.querySelectorAll('.plan-image');
-                images.forEach((img, index) => {
-                    const planNumber = index + 1; // Since we start at 1
-                    img.src = `assets/${planTypes[planType]}/${planTypes[planType]}-plan-${planNumber}.jpg`;
-                });
+    planTypeLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all type links
+            planTypeLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+
+            // Show/hide appropriate tabs
+            const hotelrumTabs = document.querySelector('.hotelrum-tabs');
+            const floorTabs = document.querySelector('.floor-tabs');
+            
+            if (this.textContent === 'HOTELRUM') {
+                hotelrumTabs.style.display = 'block';
+                floorTabs.style.display = 'none';
+            } else {
+                hotelrumTabs.style.display = 'none';
+                floorTabs.style.display = 'block';
+            }
+            
+            // Get the current plan type
+            const planType = this.textContent.trim();
+            
+            // Update image sources based on plan type
+            const images = document.querySelectorAll('.plan-image');
+            images.forEach((img, index) => {
+                const planNumber = index + 1; // Since we start at 1
+                img.src = `assets/${planTypes[planType]}/${planTypes[planType]}-plan-${planNumber}.jpg`;
             });
         });
     });
