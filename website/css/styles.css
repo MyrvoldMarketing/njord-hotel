@@ -172,6 +172,12 @@ body {
 
 .plan-images {
     width: 100%;
+    display: none;
+}
+
+.plan-images.hotel-plan-images,
+.plan-images.hotelrum-images {
+    display: block;
 }
 
 .plan-image {
