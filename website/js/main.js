@@ -195,7 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Add active class to clicked tab and its image
             this.classList.add('active');
-            planImages[index].classList.add('active');
+            if (planImages[index]) {
+                planImages[index].classList.add('active');
+            }
         });
     });
 });
