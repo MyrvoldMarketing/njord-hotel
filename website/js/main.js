@@ -211,11 +211,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle hotelrum tab clicks
     const hotelrumTabs = document.querySelectorAll('.hotelrum-tabs .tab-link');
-    hotelrumTabs.forEach(tab => {
+    hotelrumTabs.forEach((tab, index) => {
         tab.addEventListener('click', function(e) {
             e.preventDefault();
             hotelrumTabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
+
+            // Show corresponding room image
+            const roomImages = document.querySelectorAll('.hotelrum-images .plan-image');
+            roomImages.forEach(img => img.classList.remove('active'));
+            if (roomImages[index]) roomImages[index].classList.add('active');
         });
     });
 
@@ -233,12 +238,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const hotelrumTabs = document.querySelector('.hotelrum-tabs');
             const floorTabs = document.querySelector('.floor-tabs');
             
+            const hotelPlanImages = document.querySelector('.hotel-plan-images');
+            const hotelrumImages = document.querySelector('.hotelrum-images');
+
             if (this.textContent === 'HOTELRUM') {
                 hotelrumTabs.style.display = 'block';
                 floorTabs.style.display = 'none';
+                hotelPlanImages.style.display = 'none';
+                hotelrumImages.style.display = 'block';
+                // Show first room image by default
+                const roomImages = hotelrumImages.querySelectorAll('.plan-image');
+                roomImages.forEach(img => img.classList.remove('active'));
+                if (roomImages[0]) roomImages[0].classList.add('active');
             } else {
                 hotelrumTabs.style.display = 'none';
                 floorTabs.style.display = 'block';
+                hotelPlanImages.style.display = 'block';
+                hotelrumImages.style.display = 'none';
             }
             
             // Get the current plan type
