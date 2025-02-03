@@ -45,157 +45,18 @@ if (contactForm) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded');
-    
-    console.log('[Menu] Initializing menu functionality...');
-    
-    // Menu elements
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    const menuText = document.querySelector('.menu-text');
-    
-    // Verify all elements exist
-    if (!menuToggle || !menuOverlay || !menuText) {
-        console.error('[Menu] Missing required elements:', {
-            menuToggle: !!menuToggle,
-            menuOverlay: !!menuOverlay,
-            menuText: !!menuText
-        });
-        return;
-    }
-    
-    console.log('[Menu] All required elements found');
-    
-    const defaultText = menuText.dataset.textDefault || 'MENY';
-    const activeText = menuText.dataset.textActive || 'CLOSE';
-    
-    const toggleMenu = (show) => {
-        console.log(`[Menu] Toggling menu ${show ? 'open' : 'closed'}`);
-        
-        try {
-            menuToggle.classList.toggle('active', show);
-            menuOverlay.classList.toggle('active', show);
-            menuText.textContent = show ? activeText : defaultText;
-            document.body.style.overflow = show ? 'hidden' : '';
-            
-            console.log('[Menu] Menu state updated successfully');
-        } catch (error) {
-            console.error('[Menu] Error updating menu state:', error);
-        }
-    };
-    
-    menuToggle.addEventListener('click', () => {
-        console.log('[Menu] Menu toggle clicked');
-        const isActive = menuToggle.classList.contains('active');
-        toggleMenu(!isActive);
-    });
-    
-    // Close menu when clicking on a menu item
-    const menuLinks = document.querySelectorAll('.menu-nav a');
-    console.log(`[Menu] Found ${menuLinks.length} menu links`);
-    
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            console.log('[Menu] Menu link clicked, closing menu');
-            toggleMenu(false);
-        });
-    });
-
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Hero Slider functionality
-    const slides = document.querySelectorAll('.slide');
-    const indicators = document.querySelectorAll('.nav-indicator');
-    let currentSlide = 0;
-
-    function updateSlideIndicators() {
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentSlide);
-        });
-    }
-
-    function goToSlide(index) {
-        // Stopp alle videoer først
-        slides.forEach(slide => {
-            const video = slide.querySelector('video');
-            if (video) {
-                video.pause();
-                video.currentTime = 0;
-            }
-        });
-
-        // Bytt slide
-        slides[currentSlide].classList.remove('active');
-        currentSlide = index;
-        slides[currentSlide].classList.add('active');
-        updateSlideIndicators();
-        
-        // Start video på aktiv slide
-        const activeVideo = slides[currentSlide].querySelector('video');
-        if (activeVideo) {
-            activeVideo.play();
-        }
-    }
-
-    // Set up video ended events
-    slides.forEach((slide, index) => {
-        const video = slide.querySelector('video');
-        if (video) {
-            video.addEventListener('ended', () => {
-                const nextIndex = (index + 1) % slides.length;
-                goToSlide(nextIndex);
-            });
-        }
-    });
-
-    // Set up indicator clicks
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            if (index !== currentSlide) {
-                goToSlide(index);
-            }
-        });
-    });
-
-    // Start første slide
-    goToSlide(0);
-
-    // Plan type switching
-    const planTypeTabs = document.querySelectorAll('.tab-navigation .tab-link');
-    planTypeTabs.forEach(tab => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            planTypeTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Floor plan switching
+    // Plan switching
     const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
     const planImages = document.querySelectorAll('.plan-images .plan-image');
-
+    
     floorTabs.forEach((tab, index) => {
         tab.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            // Remove active class from all tabs and images
             floorTabs.forEach(t => t.classList.remove('active'));
             planImages.forEach(img => img.classList.remove('active'));
-            
-            // Add active class to clicked tab and its image
             this.classList.add('active');
             planImages[index].classList.add('active');
         });
     });
+});
 });
