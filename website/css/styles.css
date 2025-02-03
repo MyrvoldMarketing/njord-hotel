@@ -163,9 +163,21 @@ body {
     border-bottom-color: #333;
 }
 
+.plan-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.plan-images {
+    width: 100%;
+}
+
 .plan-image {
     display: none;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
