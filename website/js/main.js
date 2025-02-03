@@ -168,8 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Start første slide
-    goToSlide(0);
+    // Start første slide (only on index page)
+    if (document.querySelector('.slide')) {
+        goToSlide(0);
+    }
 
     // Floor plan switching
     const floorTabs = document.querySelectorAll('.floor-tabs .tab-link');
