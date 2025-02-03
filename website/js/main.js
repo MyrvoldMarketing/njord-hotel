@@ -170,4 +170,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start første slide
     goToSlide(0);
+
+    // Plan switching functionality
+    const planTabs = document.querySelectorAll('.floor-tabs .tab-link');
+    
+    planTabs.forEach((tab, index) => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all tabs and images
+            document.querySelectorAll('.tab-link').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.plan-image').forEach(img => img.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Show corresponding image
+            document.querySelectorAll('.plan-image')[index].classList.add('active');
+        });
+    });
 });
