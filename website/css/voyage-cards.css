@@ -21,19 +21,17 @@
 }
 
 .voyage-info {
-    background: #F8F8F8;
-    padding: 30px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .voyage-info p {
-    margin: 0 0 15px;
+    margin: 0 0 25px;
 }
 
 .discover-link {
-    color: inherit;
+    color: #000;
     text-decoration: none;
     font-size: 14px;
-    text-transform: lowercase;
 }
 
