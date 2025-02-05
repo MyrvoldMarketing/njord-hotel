@@ -1481,6 +1481,10 @@ h2 {
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.voyage-info .discover-link {
+    color: #000;
     border-bottom: 1px solid #000;
     position: absolute;
     bottom: 30px;
