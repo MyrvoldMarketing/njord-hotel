@@ -1457,7 +1457,14 @@ h2 {
     font-size: 16px;
 }
 
-.discover-link {
+.hero .discover-link {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voyage-info .discover-link {
     text-transform: uppercase;
     color: #000;
     text-decoration: none;
