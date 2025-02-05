@@ -3,7 +3,12 @@
     margin-bottom: 30px;
 }
 
-.voyage-card img {
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
     width: 100%;
     display: block;
 }
@@ -12,6 +17,7 @@
     background: #F8F8F8;
     padding: 30px 20px;
     text-align: center;
+    margin-top: -4px;
 }
 
 .voyage-info p {
