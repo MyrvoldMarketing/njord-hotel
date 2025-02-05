@@ -1456,12 +1456,9 @@ h2 {
 
 .voyage-info {
     background: #F8F8F8;
-    padding: 30px;
+    padding: 30px 30px 40px;
     text-align: left;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .voyage-info .tag {
@@ -1483,17 +1480,14 @@ h2 {
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    border-bottom: 1px solid;
 }
 
 .hero .discover-link {
     color: #fff;
-    border-color: #fff;
 }
 
 .voyage-info .discover-link {
     color: #000;
-    border-color: #000;
 }
 
 @media (max-width: 768px) {
