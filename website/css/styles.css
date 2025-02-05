@@ -1456,9 +1456,10 @@ h2 {
 
 .voyage-info {
     background: #F8F8F8;
-    padding: 30px 30px 40px;
+    padding: 30px;
     text-align: left;
-    flex-grow: 1;
+    height: 200px;
+    position: relative;
 }
 
 .voyage-info .tag {
@@ -1480,6 +1481,9 @@ h2 {
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-bottom: 1px solid #000;
+    position: absolute;
+    bottom: 30px;
 }
 
 .hero .discover-link {
