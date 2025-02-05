@@ -1488,6 +1488,7 @@ h2 {
 
 .hero .discover-link {
     color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .voyage-info .discover-link {
