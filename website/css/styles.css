@@ -1457,19 +1457,18 @@ h2 {
     font-size: 16px;
 }
 
-.hero .discover-link {
+.discover-link {
     text-transform: uppercase;
-    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero .discover-link {
+    color: #fff;
 }
 
 .voyage-info .discover-link {
-    text-transform: uppercase;
     color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
 }
 
 @media (max-width: 768px) {
