@@ -1457,7 +1457,7 @@ h2 {
 .voyage-info {
     background: #F8F8F8;
     padding: 30px;
-    text-align: center;
+    text-align: left;
     flex-grow: 1; /* Sikrer at alle info-bokser har samme høyde */
 }
 
@@ -1480,14 +1480,17 @@ h2 {
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-bottom: 1px solid;
 }
 
 .hero .discover-link {
     color: #fff;
+    border-color: #fff;
 }
 
 .voyage-info .discover-link {
     color: #000;
+    border-color: #000;
 }
 
 @media (max-width: 768px) {
