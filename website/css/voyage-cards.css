@@ -1,11 +1,5 @@
 .voyage-card {
     margin-bottom: 30px;
-    text-align: center;
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
 }
 
 .voyage-card img {
@@ -13,18 +7,17 @@
     display: block;
 }
 
-.tag {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
 .voyage-info {
     background: #F8F8F8;
     padding: 20px;
     text-align: center;
-    margin-top: -4px;
+}
+
+.voyage-info .tag {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .voyage-info p {
@@ -32,8 +25,8 @@
 }
 
 .discover-link {
+    text-transform: uppercase;
     color: #000;
     text-decoration: none;
-    font-size: 14px;
     font-weight: bold;
 }
