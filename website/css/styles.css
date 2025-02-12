@@ -1690,3 +1690,11 @@ h2 {
     margin-bottom: 50px;
     object-position: center;
 }
+
+.om-section {
+    padding-top: 0;
+}
+
+.om-logo-container {
+    margin: 20px 0;
+}
