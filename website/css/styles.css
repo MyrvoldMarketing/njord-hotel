@@ -1751,3 +1751,36 @@ h2 {
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
+
+.sviter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.sviter-hero-image {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.sviter-title {
+    font-size: 4rem;
+    font-family: 'SaolDisplay', serif;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+
+.sviter-description {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.sviter-subtitle {
+    font-size: 2rem;
+    font-family: 'SaolDisplay', serif;
+    font-weight: normal;
+    margin: 2rem 0 1rem;
+}
