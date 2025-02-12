@@ -1698,3 +1698,12 @@ h2 {
 .om-logo-container {
     margin: 20px 0;
 }
+
+.menu-text[data-text-default],
+.menu-text[data-text-active] {
+    content: attr(data-text-default);
+}
+
+.menu-toggle.active .menu-text {
+    content: attr(data-text-active);
+}
