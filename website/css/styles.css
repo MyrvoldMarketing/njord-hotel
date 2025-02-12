@@ -1707,3 +1707,42 @@ h2 {
 .menu-toggle.active .menu-text {
     content: attr(data-text-active);
 }
+
+.om-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    gap: 50px;
+}
+
+.om-title-container {
+    flex: 1;
+}
+
+.om-title-container h1 {
+    font-size: 4rem;
+    font-family: 'SaolDisplay', serif;
+    font-weight: normal;
+    margin: 0;
+    position: sticky;
+    top: 100px;
+}
+
+.om-text-container {
+    flex: 2;
+}
+
+.om-text-container h2 {
+    font-size: 1.5rem;
+    font-family: 'SaolDisplay', serif;
+    font-weight: normal;
+    margin: 2rem 0 1rem;
+}
+
+.om-text-container p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
