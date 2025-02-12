@@ -3,18 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Om Oss - Njord Hotel</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="https://njordhotel.com/">
-                <img src="assets/logo.png" alt="Njord Hotel Logo">
-            </a>
+    <!-- Reusing the same menu toggle from index -->
+    <button class="menu-toggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+        <span class="menu-text" data-text-default="MENY" data-text-active="STÄNG">MENY</span>
+    </button>
 
-        <div class="menu-main">
+    <section class="hotel-section" style="padding-top: 0;">
+        <div class="logo-container" style="margin: 20px 0;">
+            <img src="assets/logo.png" alt="Njord Logo" class="hero-logo">
+        </div>
+        <img src="assets/HOTELLET.png" alt="Njord Hotel" style="width: 100%; margin-bottom: 50px;">
+
+        <div class="om-page">
+            <!-- Content will be added here -->
+        </div>
+    </section>
+
+    <!-- Reuse the menu overlay from index -->
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-header">
+                <div class="menu-actions">
+                    <button class="close-menu">
+                        <span class="close-text">STÄNG</span>
+                        <span class="close-icon"></span>
+                    </button>
+                </div>
+            </div>
             <nav class="menu-nav">
                 <ul>
                     <li><a href="https://njordhotel.com/">HEM</a></li>
@@ -24,39 +52,20 @@
                     <li><a href="intresseanmalan">KONTAKT</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
-
-    <div class="hero-image">
-        <img src="assets/HOTELLET.png" alt="Njord Hotel Building">
-    </div>
-
-    <div class="om-page">
-        <!-- Content will be added here -->
-    </div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>KONTAKT</h3>
-                <p>info@njordhotel.com</p>
-                <p>+46 (0)76 140 00 70</p>
-            </div>
-            <div class="footer-section">
-                <h3>ADRESS</h3>
-                <p>Strandgatan 18</p>
-                <p>452 30 Strömstad</p>
-            </div>
-            <div class="footer-section">
-                <h3>FÖLJ OSS</h3>
-                <div class="social-links">
+            <div class="menu-footer">
+                <div class="menu-contact">
+                    <p>info@njordhotel.com</p>
+                    <p>+46 (0)76 140 00 70</p>
+                </div>
+                <div class="menu-social">
                     <a href="https://www.instagram.com/njordhotel/" target="_blank">Instagram</a>
                     <a href="https://www.facebook.com/njordhotel" target="_blank">Facebook</a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
