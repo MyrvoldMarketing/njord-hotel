@@ -284,6 +284,11 @@ body {
     height: 100%;
     background-color: #fff;
     transform: translateX(-100%);
+    opacity: 0;
+}
+
+.nav-indicator.active .progress {
+    opacity: 1;
 }
 
 .hero-content {

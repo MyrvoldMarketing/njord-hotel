@@ -127,29 +127,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let progressInterval;
 
-    function startProgress() {
+    function resetAllProgress() {
+        const allProgress = document.querySelectorAll('.nav-indicator .progress');
+        allProgress.forEach(progress => {
+            progress.style.transition = 'none';
+            progress.style.transform = 'translateX(-100%)';
+        });
+    }
+
+    function startProgress(videoDuration) {
+        resetAllProgress();
         const activeIndicator = document.querySelector('.nav-indicator.active .progress');
         if (!activeIndicator) return;
 
-        // Reset progress
-        activeIndicator.style.transition = 'none';
-        activeIndicator.style.transform = 'translateX(-100%)';
-        
         // Force reflow
         activeIndicator.offsetHeight;
 
-        // Start progress animation
-        activeIndicator.style.transition = 'transform 7s linear';
+        // Start progress animation with video duration
+        activeIndicator.style.transition = `transform ${videoDuration}s linear`;
         activeIndicator.style.transform = 'translateX(0%)';
     }
 
     function goToSlide(index) {
         // Clear any existing interval
         if (progressInterval) {
-            clearInterval(progressInterval);
+            clearTimeout(progressInterval);
         }
 
-        // Stop all videos first
+        // Stop all videos and reset progress
         slides.forEach(slide => {
             const video = slide.querySelector('video');
             if (video) {
@@ -157,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 video.currentTime = 0;
             }
         });
+        resetAllProgress();
 
         // Switch slide
         slides[currentSlide].classList.remove('active');
@@ -167,14 +173,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start video on active slide
         const activeVideo = slides[currentSlide].querySelector('video');
         if (activeVideo) {
-            activeVideo.play();
-            startProgress();
-
-            // Set up next slide transition
-            progressInterval = setTimeout(() => {
-                const nextIndex = (currentSlide + 1) % slides.length;
-                goToSlide(nextIndex);
-            }, 7000);
+            // Wait for video metadata to load to get duration
+            if (activeVideo.readyState >= 1) {
+                activeVideo.play();
+                startProgress(activeVideo.duration);
+                progressInterval = setTimeout(() => {
+                    const nextIndex = (currentSlide + 1) % slides.length;
+                    goToSlide(nextIndex);
+                }, activeVideo.duration * 1000);
+            } else {
+                activeVideo.addEventListener('loadedmetadata', () => {
+                    activeVideo.play();
+                    startProgress(activeVideo.duration);
+                    progressInterval = setTimeout(() => {
+                        const nextIndex = (currentSlide + 1) % slides.length;
+                        goToSlide(nextIndex);
+                    }, activeVideo.duration * 1000);
+                });
+            }
         }
     }
 
