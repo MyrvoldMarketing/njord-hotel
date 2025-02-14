@@ -349,8 +349,8 @@ body {
     font-size: 0.8rem;
     letter-spacing: 1.5px;
     position: relative;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem auto 3rem;
+    display: inline-block;
 }
 
 .discover-link-hero::after {
