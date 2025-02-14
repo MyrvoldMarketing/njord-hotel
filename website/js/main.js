@@ -125,8 +125,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    let progressInterval;
+
+    function startProgress() {
+        const activeIndicator = document.querySelector('.nav-indicator.active .progress');
+        if (!activeIndicator) return;
+
+        // Reset progress
+        activeIndicator.style.transition = 'none';
+        activeIndicator.style.transform = 'translateX(-100%)';
+        
+        // Force reflow
+        activeIndicator.offsetHeight;
+
+        // Start progress animation
+        activeIndicator.style.transition = 'transform 7s linear';
+        activeIndicator.style.transform = 'translateX(0%)';
+    }
+
     function goToSlide(index) {
-        // Stopp alle videoer først
+        // Clear any existing interval
+        if (progressInterval) {
+            clearInterval(progressInterval);
+        }
+
+        // Stop all videos first
         slides.forEach(slide => {
             const video = slide.querySelector('video');
             if (video) {
@@ -135,16 +158,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Bytt slide
+        // Switch slide
         slides[currentSlide].classList.remove('active');
         currentSlide = index;
         slides[currentSlide].classList.add('active');
         updateSlideIndicators();
         
-        // Start video på aktiv slide
+        // Start video on active slide
         const activeVideo = slides[currentSlide].querySelector('video');
         if (activeVideo) {
             activeVideo.play();
+            startProgress();
+
+            // Set up next slide transition
+            progressInterval = setTimeout(() => {
+                const nextIndex = (currentSlide + 1) % slides.length;
+                goToSlide(nextIndex);
+            }, 7000);
         }
     }
 
