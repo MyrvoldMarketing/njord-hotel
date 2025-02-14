@@ -1557,6 +1557,25 @@ h2 {
     opacity: 1;
 }
 
+.voyage-discover-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000;
+    transition: width 0.7s ease;
+}
+
+.voyage-discover-link:hover::after {
+    opacity: 0;
+}
+
+.voyage-discover-link:hover::before {
+    width: 100%;
+}
+
 .voyage-info .tag {
     display: block;
     font-size: 14px;
