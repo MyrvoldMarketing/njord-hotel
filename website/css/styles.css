@@ -571,6 +571,7 @@ p {
 .menu-main {
     display: flex;
     flex: 1;
+    flex-direction: row-reverse;
     position: relative;
     padding: 0 40px;
 }
@@ -589,7 +590,6 @@ p {
     width: 20%;
     display: flex;
     align-items: flex-start;
-    padding-left: 40px;
 }
 
 .menu-nav ul {
