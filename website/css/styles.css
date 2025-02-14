@@ -449,7 +449,7 @@ p {
     right: -10px;
     bottom: -10px;
     left: -10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     z-index: -1;
 }
