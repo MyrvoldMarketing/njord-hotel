@@ -22,7 +22,7 @@
                 <img src="assets/logo-svart.png" alt="Njord Hotel Logo" class="contact-logo">
                 <h1>SÖK OM ÄGAR SVITER PÅ<br> NJORD HOTEL</h1>
                 <p class="form-subtitle">Vi hyr ut din svit när du inte använder den.</p>
-                <form class="contact-form">
+                <form class="contact-form" id="interestForm" method="post">
                     <div class="form-row">
                         <div class="form-group">
                             <span class="required">*</span>
@@ -59,7 +59,7 @@
                         </label>
                     </div>
 
-                    <a href="#discover-suites" class="discover-button"><span>SKICKA FÖRFRÅGAN</span></a>
+                    <button type="submit" class="discover-button"><span>SKICKA FÖRFRÅGAN</span></button>
 
                     <p class="privacy-notice">
                         Genom att välja "Skicka" bekräftar jag att Njord Hotell kommer att behandla mina personuppgifter i enlighet med vår Integritetspolicy. 
@@ -138,5 +138,6 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/form-handler.js"></script>
 </body>
 </html>
