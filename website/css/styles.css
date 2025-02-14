@@ -571,7 +571,6 @@ p {
 .menu-main {
     display: flex;
     flex: 1;
-    flex-direction: row-reverse;
     position: relative;
     padding: 0 40px;
 }
@@ -670,6 +669,7 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 0 30px;
+    margin-left: auto;
 }
 
 .feature-item {
