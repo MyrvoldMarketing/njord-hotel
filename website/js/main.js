@@ -250,6 +250,48 @@ document.addEventListener('DOMContentLoaded', () => {
     setupTabSwitching('.floor-tabs .tab-link', '.hotel-plan-images');
 
     // Set up hotelrum switching
+
+    // Lightbox functionality
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+    // Function to open lightbox
+    function openLightbox(imgSrc) {
+        lightboxImg.src = imgSrc;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to close lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Add click event to plan images
+    document.querySelectorAll('.plan-image').forEach(img => {
+        img.addEventListener('click', function() {
+            openLightbox(this.src);
+        });
+    });
+
+    // Close lightbox when clicking close button
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close lightbox with escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
     setupTabSwitching('.hotelrum-tabs .tab-link', '.hotelrum-images');
 
     // Plan type switching (Hotelrum/Hotel)
