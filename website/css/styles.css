@@ -344,12 +344,11 @@ body {
 /* Hero discover link - alltid hvit */
 .discover-link-hero {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 0.8rem;
     letter-spacing: 1.5px;
-    position: absolute;
-    bottom: 30px;
+    position: relative;
     display: inline-block;
 }
 
@@ -1534,6 +1533,17 @@ h2 {
     text-align: left;
     height: 200px;
     position: relative;
+}
+
+.voyage-discover-link {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    position: absolute;
+    bottom: 30px;
+    display: inline-block;
 }
 
 .voyage-info .tag {
