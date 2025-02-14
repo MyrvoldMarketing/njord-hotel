@@ -160,8 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Set up indicator clicks
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
+    const navButtons = document.querySelectorAll('.nav-button');
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const index = parseInt(button.dataset.slide);
             if (index !== currentSlide) {
                 goToSlide(index);
             }
