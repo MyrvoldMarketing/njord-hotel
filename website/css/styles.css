@@ -265,7 +265,7 @@ body {
 .nav-indicator {
     width: 50px;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -273,7 +273,7 @@ body {
 }
 
 .nav-indicator.active {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-indicator .progress {
@@ -285,6 +285,7 @@ body {
     background-color: #fff;
     transform: translateX(-100%);
     opacity: 0;
+    pointer-events: none;
 }
 
 .nav-indicator.active .progress {

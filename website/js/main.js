@@ -144,8 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
         activeIndicator.offsetHeight;
 
         // Start progress animation with video duration
-        activeIndicator.style.transition = `transform ${videoDuration}s linear`;
-        activeIndicator.style.transform = 'translateX(0%)';
+        requestAnimationFrame(() => {
+            activeIndicator.style.transition = `transform ${videoDuration}s linear`;
+            activeIndicator.style.transform = 'translateX(0%)';
+        });
     }
 
     function goToSlide(index) {
