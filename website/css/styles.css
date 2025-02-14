@@ -647,17 +647,25 @@ p {
 
 .feature-image {
     width: 100%;
-    height: 200px;
+    height: 100%;
 }
 
 .feature-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0;
 }
 
-.feature-item:hover .feature-image img {
-    transform: scale(1.05);
+.feature-item {
+    height: 100%;
+}
+
+.menu-features {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
 }
 
 .feature-text {
