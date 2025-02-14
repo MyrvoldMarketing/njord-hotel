@@ -606,26 +606,27 @@ p {
     text-align: left;
 }
 
+.menu-nav ul li {
+    margin: 0;
+    text-align: left;
+    position: relative;
+    padding-left: 15px;
+}
+
+.menu-nav ul li.active::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-size: 15px;
+}
+
 .menu-nav ul li a {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #fff;
     text-decoration: none;
     font-size: 0.8rem;
     letter-spacing: 1.5px;
-    position: relative;
-    padding-left: 15px;
-}
-
-.menu-nav ul li a::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: transparent;
-    transition: color 0.3s ease;
-}
-
-.menu-nav ul li.active a::before {
-    color: #fff;
 }
 
 .menu-features {
