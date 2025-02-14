@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const hotelPlanImages = document.querySelector('.hotel-plan-images');
             const hotelrumImages = document.querySelector('.hotelrum-images');
 
-            if (this.textContent === 'HOTELRUM') {
+            if (this.textContent === 'HOTELLRUM') {
                 hotelrumTabs.style.display = 'block';
                 floorTabs.style.display = 'none';
                 hotelPlanImages.style.display = 'none';
