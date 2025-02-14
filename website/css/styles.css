@@ -669,8 +669,6 @@ p {
     width: 80%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    padding: 0 30px;
 }
 
 .feature-text {
