@@ -588,7 +588,8 @@ p {
 .menu-nav {
     width: 20%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 40px;
 }
 
 .menu-nav ul {
