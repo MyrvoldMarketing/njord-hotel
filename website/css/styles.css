@@ -1712,18 +1712,20 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 20px 0;
+    margin: 0;
+    margin-bottom: 0;
 }
 
 .floor-tabs, .hotelrum-tabs {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 20px 0;
+    margin: 0;
+    margin-bottom: 0;
 }
 
 .plan-container {
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .section-description {
