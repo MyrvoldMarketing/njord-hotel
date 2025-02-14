@@ -1546,6 +1546,17 @@ h2 {
     display: inline-block;
 }
 
+.voyage-discover-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000;
+    opacity: 1;
+}
+
 .voyage-info .tag {
     display: block;
     font-size: 14px;
