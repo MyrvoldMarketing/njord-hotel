@@ -716,8 +716,9 @@ p {
 
 .menu-actions {
     display: flex;
-    gap: 40px;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 .menu-actions a {
