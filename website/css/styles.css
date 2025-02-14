@@ -616,10 +616,15 @@ p {
     padding-left: 15px;
 }
 
-.menu-nav ul li.active a::before {
+.menu-nav ul li a::before {
     content: '•';
     position: absolute;
     left: 0;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.menu-nav ul li.active a::before {
     color: #fff;
 }
 
