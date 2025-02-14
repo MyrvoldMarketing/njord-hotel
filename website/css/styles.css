@@ -530,7 +530,7 @@ p {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: 75%;
     max-width: 1200px;
     height: 0;
     background: rgba(20, 20, 20, 0.7);
