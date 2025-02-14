@@ -1166,7 +1166,7 @@ h2 {
 }
 
 .form-group textarea::placeholder {
-    color: #333;
+    color: #999;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.8;
@@ -1209,7 +1209,7 @@ h2 {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.8;
-    color: #333;
+    color: #000;
 }
 
 .full-width {
