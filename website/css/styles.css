@@ -1212,6 +1212,53 @@ h2 {
     color: #000;
 }
 
+/* Properties Section */
+.properties-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.property-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.property-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.property-content h3 {
+    font-family: 'SaolDisplay', serif;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.property-content p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
 .full-width {
     width: 100%;
     margin-top: 20px;
