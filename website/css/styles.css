@@ -571,7 +571,6 @@ p {
 .menu-main {
     display: flex;
     flex: 1;
-    gap: 60px;
     position: relative;
     padding: 0 40px;
 }
@@ -579,7 +578,7 @@ p {
 .menu-main::after {
     content: '';
     position: absolute;
-    left: calc(20% + 30px);
+    left: 20%;
     top: 0;
     bottom: 0;
     width: 1px;
@@ -687,6 +686,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0;
 }
 
 .feature-text {
