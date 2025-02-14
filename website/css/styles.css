@@ -667,8 +667,22 @@ p {
     right: 0;
     bottom: 0;
     width: 80%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-item {
+    flex: 1;
+    height: 50%;
+    position: relative;
+}
+
+.feature-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .feature-text {
