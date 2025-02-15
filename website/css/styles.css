@@ -149,7 +149,7 @@ body {
 .properties-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px 40px;
+    column-gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -158,7 +158,8 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    height: fit-content;
+    height: 90px;
+    margin-bottom: 0;
 }
 
 .property-icon {
