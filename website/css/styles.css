@@ -149,7 +149,8 @@ body {
 .properties-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 40px;
+    row-gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -164,6 +165,10 @@ body {
     width: 20px;
     height: 20px;
     object-fit: contain;
+}
+
+.property-content {
+    margin-bottom: 20px;
 }
 
 .property-content h3 {
