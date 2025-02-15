@@ -89,7 +89,7 @@ body {
     background-color: #fff;
 }
 
-.sviter-content {
+.properties-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -98,15 +98,15 @@ body {
 
 .section-title {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #333;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 5px 0;
+    padding: 5px 15px;
     border-bottom: 2px solid #333;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     display: inline-block;
-    text-align: left;
+    font-weight: normal;
 }
 
 .hotel-title {
