@@ -90,9 +90,8 @@ body {
 }
 
 .hotel-title {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light', serif;
     font-size: 3rem;
-    font-weight: 300;
     margin-bottom: 2rem;
     letter-spacing: 1px;
 }
@@ -118,9 +117,8 @@ body {
 }
 
 .stat-number {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light', serif;
     font-size: 2.5rem;
-    font-weight: 300;
     margin-bottom: 0.5rem;
 }
 
@@ -877,9 +875,8 @@ p {
 }
 
 .feature-text h3 {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light', serif;
     font-size: 1.5rem;
-    font-weight: 300;
     margin: 0;
 }
 
@@ -1010,12 +1007,11 @@ p {
 
 /* Standardiserte h2 overskrifter */
 h2 {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light', serif;
     font-size: 70px;
     line-height: 1.2;
     margin-top: 5px;
     margin-bottom: 20px;
-    font-weight: 300;
 }
 
 /* Felles stil for discover-buttons med svart bakgrunn */
