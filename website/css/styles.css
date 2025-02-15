@@ -149,8 +149,7 @@ body {
 .properties-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    row-gap: 40px;
+    gap: 50px 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -159,16 +158,19 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 15px;
+    height: fit-content;
 }
 
 .property-icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .property-content {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .property-content h3 {
