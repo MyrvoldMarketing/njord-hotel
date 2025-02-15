@@ -131,8 +131,9 @@ body {
 
 /* Properties Section */
 .egenskaper-seksjon {
+    max-width: 1000px;
+    margin: 60px auto;
     padding: 0 80px;
-    margin: 60px 0;
 }
 
 .egenskaper-title {
@@ -142,7 +143,6 @@ body {
     color: #333;
     text-align: left;
     margin-bottom: 30px;
-    margin-left: 80px;
 }
 
 .properties-grid {
