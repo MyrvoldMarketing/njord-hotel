@@ -2052,6 +2052,6 @@ font-weight: 400;
     padding: 2em;
     display: flex;
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
