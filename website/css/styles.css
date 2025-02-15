@@ -98,15 +98,17 @@ body {
 
 .section-title {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #333;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 5px 15px;
-    border-bottom: 2px solid #333;
-    margin-bottom: 40px;
+    padding-bottom: 0.5rem;
+    margin: 0 1.5rem;
     display: inline-block;
-    font-weight: normal;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    position: relative;
+    border-bottom: 2px solid #333;
 }
 
 .hotel-title {
