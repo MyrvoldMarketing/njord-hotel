@@ -136,7 +136,13 @@ body {
 }
 
 .egenskaper-title {
-    display: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-left: 80px;
 }
 
 .properties-grid {
