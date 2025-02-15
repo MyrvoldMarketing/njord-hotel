@@ -2047,3 +2047,10 @@ text-transform: uppercase;
 position: relative;
 font-weight: 400;
 }
+
+.egenskaper-seksjon {
+    padding: 2em;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
