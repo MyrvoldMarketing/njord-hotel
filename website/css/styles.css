@@ -2033,3 +2033,17 @@ h2 {
     font-weight: normal;
     margin: 2rem 0 1rem;
 }
+
+.liten-overskrift {
+    text-align: left;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+padding-bottom: 0.5rem;
+font-size: 0.95rem;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+position: relative;
+font-weight: 400;
+}
