@@ -46,22 +46,12 @@ body {
     padding: 0 20px;
 }
 
-/* Standardized headings */
-.njord-h1,
-.njord-h2 {
+/* Base heading styles */
+h1, h2 {
     font-family: 'SaolDisplay-Light';
     letter-spacing: 2px;
     line-height: 1.2;
     margin: 0;
-}
-
-.njord-h1 {
-    font-size: 3rem;
-}
-
-.njord-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
 }
 
 /* Navigation */
@@ -107,8 +97,12 @@ body {
     background-color: #fff;
 }
 
-.hotel-title {
+/* Use njord-h1 class instead */
+h1, h2 {
     font-family: 'SaolDisplay-Light';
+}
+
+.hotel-title {
     font-size: 3rem;
     margin-bottom: 2rem;
     letter-spacing: 1px;
@@ -135,7 +129,7 @@ body {
 }
 
 .stat-number {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
@@ -270,7 +264,7 @@ body {
 
 
 .plans-title {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -480,7 +474,7 @@ body {
     max-width: 800px;
     padding: 0 20px;
     z-index: 2; /* Øker z-index for å være over overlayet */
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
 }
 
 .text-content {
@@ -887,7 +881,7 @@ p {
 }
 
 .feature-text h3 {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-size: 1.5rem;
     font-weight: 300;
     margin: 0;
@@ -1018,15 +1012,7 @@ p {
     font-weight: 400;
 }
 
-/* Standardiserte h2 overskrifter */
-h2 {
-    font-family: 'SaolDisplay', serif;
-    font-size: 70px;
-    line-height: 1.2;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
+/* Use njord-h2 class instead */
 
 /* Felles stil for discover-buttons med svart bakgrunn */
 .design-section .discover-button,
@@ -1205,7 +1191,7 @@ h2 {
 
 .contact-form-container h1 {
     font-size: 48px;
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     margin-bottom: 20px;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -1367,7 +1353,7 @@ h2 {
 }
 
 .property-content h3 {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-size: 1.1rem;
     margin: 0 0 4px 0;
     font-weight: normal;
@@ -1566,7 +1552,7 @@ h2 {
 .typewriter {
     display: inline-block;
     min-width: 150px;
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-style: italic;
     font-weight: 300;
 }
@@ -1724,7 +1710,6 @@ h2 {
 
 .featured-voyages h2 {
     text-align: center;
-    font-family: 'SaolDisplay', serif;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
@@ -1899,7 +1884,7 @@ h2 {
 }
 
 .section-description {
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-size: 2em;
     margin-bottom: 1rem;
 }
@@ -2099,7 +2084,7 @@ h2 {
 
 .om-title-container h1 {
     font-size: 4rem;
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-weight: normal;
     margin: 0;
     position: sticky;
@@ -2114,7 +2099,6 @@ h2 {
 
 .om-text-container h2 {
     font-size: 1.5rem;
-    font-family: 'SaolDisplay', serif;
     font-weight: normal;
     margin: 2rem 0 1rem;
     text-align: left;
@@ -2140,7 +2124,7 @@ h2 {
 
 .sviter-title {
     font-size: 4rem;
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-weight: normal;
     margin-bottom: 1.5rem;
 }
@@ -2155,7 +2139,7 @@ h2 {
 
 .sviter-subtitle {
     font-size: 2rem;
-    font-family: 'SaolDisplay', serif;
+    font-family: 'SaolDisplay-Light';
     font-weight: normal;
     margin: 2rem 0 1rem;
 }
