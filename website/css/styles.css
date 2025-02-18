@@ -47,19 +47,19 @@ body {
 }
 
 /* Standardized headings */
-.heading-primary,
-.heading-secondary {
+.njord-h1,
+.njord-h2 {
     font-family: 'SaolDisplay-Light';
     letter-spacing: 2px;
     line-height: 1.2;
     margin: 0;
 }
 
-.heading-primary {
+.njord-h1 {
     font-size: 3rem;
 }
 
-.heading-secondary {
+.njord-h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
