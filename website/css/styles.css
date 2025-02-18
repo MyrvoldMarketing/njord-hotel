@@ -8,10 +8,10 @@
 }
 
 @font-face {
-    font-family: 'SaolDisplay';
+    font-family: 'SaolDisplay-Light';
     src: url('../fonts/SaolDisplay-Light.woff2') format('woff2'),
          url('../fonts/SaolDisplay-Light.woff') format('woff');
-    font-weight: 100;
+    font-weight: normal;
     font-style: normal;
 }
 
