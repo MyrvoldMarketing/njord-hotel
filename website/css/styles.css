@@ -46,12 +46,8 @@ body {
     padding: 0 20px;
 }
 
-/* Base heading styles */
-h1, h2 {
+.njord-heading {
     font-family: 'SaolDisplay-Light';
-    letter-spacing: 2px;
-    line-height: 1.2;
-    margin: 0;
 }
 
 /* Navigation */
