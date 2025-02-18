@@ -48,6 +48,7 @@ body {
 
 .njord-heading {
     font-family: 'SaolDisplay-Light';
+    font-size: 3em;
 }
 
 /* Navigation */
@@ -94,9 +95,7 @@ body {
 }
 
 /* Use njord-h1 class instead */
-h1, h2 {
-    font-family: 'SaolDisplay-Light';
-}
+
 
 .hotel-title {
     font-size: 3rem;
@@ -1873,7 +1872,6 @@ p {
 }
 
 .section-title {
-    font-family: 'SaolDisplay-Light';
     font-size: 4rem;
     margin: 0;
     line-height: 1.2;
@@ -2080,7 +2078,6 @@ p {
 
 .om-title-container h1 {
     font-size: 4rem;
-    font-family: 'SaolDisplay-Light';
     font-weight: normal;
     margin: 0;
     position: sticky;
