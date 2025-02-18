@@ -46,9 +46,22 @@ body {
     padding: 0 20px;
 }
 
-/* Hero title */
-.text-content h1.hero-title {
+/* Standardized headings */
+.heading-primary,
+.heading-secondary {
     font-family: 'SaolDisplay-Light';
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.heading-primary {
+    font-size: 3rem;
+}
+
+.heading-secondary {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Navigation */
@@ -479,10 +492,6 @@ body {
 
 .text-content h1 {
     font-size: 3rem;
-    letter-spacing: 2px;
-    line-height: 1.2;
-    margin: 0;
-    font-weight: normal;
 }
 
 .text-content h1 em {
