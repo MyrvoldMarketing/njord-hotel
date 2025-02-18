@@ -46,6 +46,11 @@ body {
     padding: 0 20px;
 }
 
+/* Hero title */
+.hero-title {
+    font-family: 'SaolDisplay-Light';
+}
+
 /* Navigation */
 .main-nav {
     position: fixed;
