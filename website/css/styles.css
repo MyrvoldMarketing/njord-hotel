@@ -47,7 +47,7 @@ body {
 }
 
 /* Hero title */
-.hero-title {
+.text-content h1.hero-title {
     font-family: 'SaolDisplay-Light';
 }
 
@@ -483,7 +483,6 @@ body {
     line-height: 1.2;
     margin: 0;
     font-weight: normal;
-    font-family: 'SaolDisplay', serif;
 }
 
 .text-content h1 em {
