@@ -615,6 +615,7 @@ p {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     padding: 15px;
     color: #fff;
