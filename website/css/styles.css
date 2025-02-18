@@ -47,8 +47,7 @@ body {
 }
 
 .njord-heading {
-    font-family: 'SaolDisplay-Light';
-    font-size: 3em;
+    font-family: 'SaolDisplay-Light' !important;
 }
 
 /* Navigation */
@@ -1154,12 +1153,7 @@ p {
     margin-bottom: 40px;
 }
 
-.contact-info h2 {
-    font-size: 32px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-}
+
 
 .contact-info p {
     font-size: 16px;
@@ -1507,9 +1501,7 @@ p {
         transform: translateX(-50%);
     }
     
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
+    
     
     .hero-content p {
         font-size: 1rem;
@@ -1558,12 +1550,7 @@ p {
     padding-top: 35px; /* Changed from 75px to 35px to align with heading */
 }
 
-.vision-section h2 {
-    font-size: 65px;
-    margin-bottom: 15px;
-    text-align: left;
-    white-space: nowrap;
-}
+
 
 .vision-grid {
     display: grid;
