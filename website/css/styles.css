@@ -237,10 +237,22 @@ p {
     width: 20%;
     position: relative;
     padding-right: 2rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    height: 500px;
     display: flex;
     align-items: center;
+}
+
+.menu-main {
+    position: relative;
+}
+
+.menu-main::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .menu-nav ul {
