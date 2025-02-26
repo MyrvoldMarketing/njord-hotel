@@ -1,0 +1,111 @@
+.sviter-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+
+
+.sviter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.sviter-title {
+    font-size: 4rem;
+    font-family: 'SaolDisplay-Light';
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+
+.sviter-description {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.sviter-subtitle {
+    font-size: 2rem;
+    font-family: 'SaolDisplay-Light';
+    font-weight: normal;
+    margin: 2rem 0 1rem;
+}
+
+/* Properties Section */
+.egenskaper-seksjon {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 80px;
+}
+
+.egenskaper-seksjon {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+
+.egenskaper-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+    text-align: left;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    gap: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 1000px;
+}
+
+
+
+
+.property-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.property-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.property-content h3 {
+    font-family: 'SaolDisplay-Light';
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+    font-weight: normal;
+    color: #000;
+}
+
+.property-content p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
