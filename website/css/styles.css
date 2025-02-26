@@ -242,17 +242,25 @@ p {
 }
 
 .menu-main {
-    position: relative;
+    display: flex;
+    gap: 2rem;
+    height: 500px;
 }
 
-.menu-main::before {
-    content: '';
-    position: absolute;
-    left: 20%;
-    top: 0;
-    height: 100%;
-    width: 1px;
-    background: rgba(255, 255, 255, 0.1);
+.menu-nav {
+    width: 20%;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.menu-features {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-self: center;
 }
 
 .menu-nav ul {
