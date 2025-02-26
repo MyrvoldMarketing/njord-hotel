@@ -237,7 +237,9 @@ p {
     width: 20%;
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 500px;
+    padding-right: 2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .menu-nav ul {
@@ -289,9 +291,6 @@ p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    height: 500px;
-    padding-right: 2rem;
 }
 
 .menu-features {
@@ -301,7 +300,8 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 0 auto;
+    margin: auto;
+    height: 500px;
 }
 
 .feature-item {
