@@ -3,4 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/njordhotel/public_html
     - /bin/cp -R website/* $DEPLOYPATH/
-    - /bin/cp website/.* $DEPLOYPATH/ 2>/dev/null || true
+    - /bin/cp -R website/.* $DEPLOYPATH/ 2>/dev/null || true
+    - /bin/chmod 755 $DEPLOYPATH
+    - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} \;
+    - /bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} \;
