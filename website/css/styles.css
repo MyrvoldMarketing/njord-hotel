@@ -289,12 +289,14 @@ p {
 }
 
 .menu-features {
-    width: 30%;
+    position: relative;
+    width: 100%;
+    max-width: 120px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 45%));
-    gap: 0.5%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
     justify-content: center;
-    padding: 0;
+    margin: 1rem auto;
 }
 
 .feature-item {
@@ -307,40 +309,6 @@ p {
 .feature-image {
     width: 100%;
     height: 100%;
-}
-
-.feature-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0;
-}
-
-.feature-item {
-    height: 100%;
-}
-
-.menu-features {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 0 30px;
-    margin-left: auto;
-}
-
-.feature-item {
-    position: relative;
-    height: 100%;
-}
-
-.feature-image {
-    height: 100%;
-    width: 100%;
 }
 
 .feature-image img {
