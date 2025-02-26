@@ -290,10 +290,17 @@ p {
 
 .menu-main {
     display: flex;
-    align-items: center;
-    padding: 2rem;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.menu-nav {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 2rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .menu-features {
