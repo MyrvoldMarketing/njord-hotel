@@ -290,19 +290,10 @@ p {
 
 .menu-main {
     display: flex;
-    align-items: stretch;
-    gap: 0;
-    position: relative;
-}
-
-.menu-main::after {
-    content: '';
-    position: absolute;
-    right: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    padding: 2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
 }
 
 .menu-features {
