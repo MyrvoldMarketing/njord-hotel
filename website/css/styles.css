@@ -288,6 +288,12 @@ p {
     color: #999;
 }
 
+.menu-main {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+}
+
 .menu-features {
     position: relative;
     width: 100%;
@@ -295,8 +301,8 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    justify-content: center;
-    margin: 1rem auto;
+    align-self: center;
+    margin: 0;
 }
 
 .feature-item {
