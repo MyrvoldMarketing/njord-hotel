@@ -291,7 +291,7 @@ p {
 .menu-features {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 750px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
