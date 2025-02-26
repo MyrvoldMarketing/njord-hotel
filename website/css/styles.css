@@ -292,15 +292,20 @@ p {
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     padding-left: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .feature-item {
     position: relative;
     overflow: hidden;
     border-radius: 0;
+    aspect-ratio: 1;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .feature-image {
