@@ -237,16 +237,10 @@ p {
     width: 20%;
     position: relative;
     padding-right: 2rem;
-}
-
-.menu-nav::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     height: 500px;
-    width: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
 }
 
 .menu-nav ul {
