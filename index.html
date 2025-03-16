@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Njord Hotell</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body class="index">
+    <button class="menu-toggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="menu-text" data-text-default="MENY" data-text-active="STÄNG">MENY</span>
+    </button>
+
+    <div class="hero">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Njord Logo" class="hero-logo">
+
+            </a>
+        </div>
+        <div class="slider">
+            <div class="slide active">
+                <video muted playsinline>
+                    <source src="assets/first.mp4" type="video/mp4">
+                </video>
+                <div class="hero-content">
+                    <div class="text-content">
+                        <h1 class="njord-heading">NJORD <span class="light-italic">BRANDED</span><br>HOTEL & SUITS</h1>
+                        <p>Öppnar sommaren 2028.Med 165 rum och 104 ägarlägenheter
+                            kombinerar Njord modern lyx, ett avkopplande spa
+                            och flexibla eventutrymmen, allt inspirerat av
+                            den lugna skönheten i den skandinaviska naturen.</p>
+                        <a href="intresseanmalan" class="discover-link-hero">UPPTÄCK NU</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <video muted playsinline>
+                    <source src="assets/2Nature.mp4" type="video/mp4">
+                </video>
+                <div class="hero-content">
+                    <div class="text-content">
+                        <h1 class="njord-heading"> <span class="light-italic">EXKLUSIVT<br></span>SÄSONGSBOENDE</h1>
+                        <p>Njord kommer att erbjuda en förfinad standard för säsongsboende, där exceptionell design och
+                            kvalitet skapar en framstående upplevelse.</p>
+                        <a href="intresseanmalan" class="discover-link-hero">UPPTÄCK NU</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <video muted playsinline>
+                    <source src="assets/3Elements.mp4" type="video/mp4">
+                </video>
+                <div class="hero-content">
+                    <div class="text-content">
+                        <h1 class="njord-heading">FÖRENA DIG<br>MED <span class="light-italic">ELEMENTEN</span></h1>
+                        <p>Natur. Rå skönhet, modern design och lyx förenas i detta projekt för att erbjuda en förfinad,
+                            harmonisk upplevelse där enkelhet möter elegans.</p>
+                        <a href="intresseanmalan" class="discover-link-hero">UPPTÄCK NU</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <video muted playsinline>
+                    <source src="assets/4Relaxation.mp4" type="video/mp4">
+                </video>
+                <div class="hero-content">
+                    <div class="text-content">
+                        <h1 class="njord-heading">OMFAMNA DET<br> <span class="light-italic">NATURLIGA</span></h1>
+                        <p>Vårt spa kommer att vara en plats där du kan upptäcka den lugnande harmonin av vatten, sten
+                            och salt, som tillsammans återställer balans och lugn.</p>
+                        <a href="intresseanmalan" class="discover-link-hero">UPPTÄCK NU</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-nav">
+                <button class="nav-button" data-slide="0">
+                    <div class="nav-indicator active">
+                        <div class="progress"></div>
+                    </div>
+                </button>
+                <button class="nav-button" data-slide="1">
+                    <div class="nav-indicator">
+                        <div class="progress"></div>
+                    </div>
+                </button>
+                <button class="nav-button" data-slide="2">
+                    <div class="nav-indicator">
+                        <div class="progress"></div>
+                    </div>
+                </button>
+                <button class="nav-button" data-slide="3">
+                    <div class="nav-indicator">
+                        <div class="progress"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-header">
+                <div class="menu-actions">
+                    <a href="#" class="sign-in">
+                        <img src="assets/profile.png" style="width:50px;" alt="">
+                        <!-- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                                fill="currentColor" />
+                        </svg> -->
+                        SIGN IN
+                    </a>
+                    <a href="tel:+46730304978" class="phone">
+                        <img src="assets/mobile.png" style="width:50px;" alt="">
+                        <!-- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"
+                                fill="currentColor" />
+                        </svg> -->
+                        +46 73-030 49 78
+                    </a>
+                    <a href="https://njordhotel.com/#subscription" id="subscriptionBtn" class="book-now">NYHETSBREV</a>
+                    <a href="intresseanmalan" class="book-now">INTERESSEANMALAN</a>
+                </div>
+            </div>
+            <div class="menu-main">
+                <nav class="menu-nav">
+                    <ul>
+                        <li class="active"><a href="https://njordhotel.com/">HEM</a></li>
+                        <li><a href="hotel">HOTELL</a></li>
+                        <li><a href="sviter">SVITER</a></li>
+                        <li><a href="om">OM OSS</a></li>
+                        <li><a href="intresseanmalan">KONTAKT</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-features">
+                    <div class="feature-item">
+                        <div class="feature-image">
+                            <img src="assets/hotell-front.png" alt="Hotel Front">
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-image">
+                            <img src="assets/hotell-side.png" alt="Hotel Side View">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="featured-voyages">
+        <div class="container">
+            <h2 class="njord-heading pb20" style="text-align: center !important">Hotell i Strömstad, Sverige</h2>
+            <div class="voyages-grid">
+                <div class="voyage-card">
+                    <img src="assets/Stro.webp" alt="Strömstad">
+                    <span class="tag">INTERESSEANMÄLAN</span>
+                    <div class="voyage-info">
+                        <p>Skicka in din interesseanmälan för Njord Hotel som öppnar 2028</p>
+                        <a href="intresseanmalan" class="voyage-discover-link">UPPTÄCK NU</a>
+                    </div>
+                </div>
+                <div class="voyage-card">
+                    <img src="assets/ht12.webp" alt="Modern design">
+                    <span class="tag">HOTELL</span>
+                    <div class="voyage-info">
+                        <p>Modern design med naturskön omgivning, och erbjuder en unik upplevelse när hav och kultur</p>
+                        <a href="hotel" class="voyage-discover-link">UPPTÄCK NU</a>
+                    </div>
+                </div>
+                <div class="voyage-card">
+                    <img src="assets/sviter.webp" alt="Vakna upp">
+                    <span class="tag">SVITER</span>
+                    <div class="voyage-info">
+                        <p>Vakna upp till en hisnande miljö, där stilla vatten möter oändliga horisonter</p>
+                        <a href="sviter" class="voyage-discover-link">UPPTÄCK NU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="suites-section">
+        <div class="suites-container">
+            <div class="suites-text">
+                <span class="section-label">HOTELLET</span>
+                <h2 class="njord-heading pb20">VÄLKOMMEN TILL<br><span class="light-italic">NJORD HOTELL</span></h2>
+                <p>Vi är glada att du har hittat till oss. På Njord Hotel präglas varje detalj av
+                    vattnets lugnande närvaro och essensen av skandinavisk harmoni—
+                    element som noggrant utformats för att stilla dina sinnen och ge en
+                    upplevelse fylld av lugn, förnyelse och glädje. Här kan du förvänta dig
+                    omtänksamma överraskningar, minnesvärda ögonblick, förnyade rutiner
+                    och känsla av total balans.
+                </p>
+                <a href="hotel" class="discover-button"><span>UPPTÄCK NU</span></a>
+            </div>
+            <div class="suites-image">
+                <img src="assets/spa-ny-1.webp" alt="Luxurious Hotel Suite">
+            </div>
+        </div>
+    </section>
+
+    <section class="design-section">
+        <div class="design-container">
+            <span class="section-label">SVITER</span>
+            <h2 class="njord-heading pb20"><span class="light-italic">DESIGN: MED ETT SYFTE</span></h2>
+            <p>Vi tror på att god energi är ren energi och strävar efter att skapa en upplevelse som både inspirerar och
+                erbjuder en
+                hållbar, harmonisk miljö för våra svitägare. Designen av våra äger sviter har ett syfte – att skapa en
+                omgivning där
+                naturinspirerade detaljer främjar både avkoppling och välbefinnande. Med ett välorganiserat system så
+                att du kan koppla
+                av och njuta av din tid här.
+            </p>
+            <a href="sviter" class="discover-button"><span>UPPTÄCK NU</span></a>
+        </div>
+    </section>
+
+    <section class="hotel-exterior">
+        <div class="hotel-image">
+            <img src="assets/Framsidan skymning-3.webp" alt="Njord Hotell Exterior">
+        </div>
+    </section>
+
+    <section class="vision-section">
+        <div class="vision-content">
+            <div>
+                <span class="section-label">OUR VISION</span>
+                <h2 class="njord-heading">VÅR VISION ÄR ATT<br>INSPIRERA</h2>
+            </div>
+            <p>På Njord Hotel förenas fyra grundläggande element som tillsammans definierar vår unika atmosfär. Här är lyx inte bara
+                en etikett – det är en noggrant utformad upplevelse där varje detalj är vald med passion för att omfamna och förhöja din
+                vistelse. Våra interiörer speglar naturens lugn med levande inslag och naturliga material, vilket skapar en harmonisk
+                kontrast till den moderna designens rena linjer och innovativa teknologi.</p>
+                <p>Modernitet är självklar här – en dynamisk puls som väver samman framtidens bekvämligheter med en tidlös estetik.
+                    Samtidigt hyllar vi det råa, ofiltrerade; en påminnelse om att äkta känsla och äkthet alltid finns i varje vrå. Denna unika
+                    mix av polerad elegans och rå, oförfalskad energi gör att Njord Hotel står ut som en plats där du både kan njuta av
+                    sofistikerad lyx och återknyta till naturens ursprungliga kraft.</p>
+        </div>
+        <div class="vision-grid">
+            <div class="vision-item">
+                <img src="assets/lyx.webp" alt="Luxury" class="vision-image">
+                <span class="section-label">LYX</span>
+            </div>
+            <div class="vision-item">
+                <img src="assets/natur.webp" alt="Comfort" class="vision-image">
+                <span class="section-label">NATURAL</span>
+            </div>
+            <div class="vision-item">
+                <img src="assets/modern.webp" alt="Modern" class="vision-image">
+                <span class="section-label">MODERN</span>
+            </div>
+            <div class="vision-item">
+                <img src="assets/rahit.webp" alt="Raw" class="vision-image">
+                <span class="section-label">RÅHET</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscription" id="subscription">
+        <div>
+            <h2 class="njord-heading">NYHETSBREV</h2>
+            <p class="sub_bottom_text">Var först med att upptäcka allt om Njord Hotel</p>
+        </div>
+        <div>
+            <form action="">
+                <div class="fgroup">
+
+                    <input type="text" placeholder="Förnamn">
+                    <input type="text" placeholder="Efternamn">
+                </div>
+                <div class="sgroup">
+                    <input type="text" placeholder="Email Adress ">
+                    <button>Prenumerera</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/logo.png" alt="Njord Logo" class="footer-logo">
+                <p>Upplev total avkoppling i en harmonisk miljö där natur och elegans möts för att skapa en oförglömlig
+                    njutelse.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@njordhotel.com</p>
+                <p>Tel: +46 73-030 49 78</p>
+                <p>Adress: Trädgårdsgatan 9<br>452 31 Strömstad</p>
+            </div>
+            <div class="footer-section">
+                <h3>Länkar</h3>
+                <p><a href="https://njordhotel.com" target="_blank">Hem</a></p>
+                <p><a href="https://njordhotel.com/hotel" target="_blank">Hotel</a></p>
+                <p><a href="https://njordhotel.com/sviter" target="_blank">Sviter</a></p>
+                <p><a href="https://njordhotel.com/om-oss" target="_blank">Om oss</a></p>
+                <p><a href="https://njordhotel.com/kontakt" target="_blank">Kontakt</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Öppnar 2028</h3>
+                <p>Njord Hotel öppnar sommaren 2028</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Njord Hotel. All rights reserved.</p>
+            <p>Website by <a href="https://myrvold.marketing" target="_blank">Myrvold Marketing</a></p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Njord Hotell - Hotellet</title>
+    <link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hotel.css">
+
+</head>
+
+<body class="hotel">
+    <!-- Reusing the same menu toggle from index -->
+    <button class="menu-toggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="menu-text" data-text-default="MENY" data-text-active="STÄNG">MENY</span>
+    </button>
+
+    <section class="hotel-section" style="padding-top: 0;">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Njord Logo" class="hero-logo">
+            </a>
+        </div>
+        <img src="assets/Hotellet-ny.webp" alt="Njord Hotel" style="width: 100%; margin-bottom: 50px;">
+        <span class="section-label">HOTELLET</span>
+        <h1 class="njord-heading pb20">NJORD HOTEL</h1>
+        <p class="hotel-description"
+            style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; line-height: 1.8; max-width: 800px; margin: 0 auto 4rem;">
+            Njord Hotel är ett projekt som har haft ett stort fokus på att skapa en unik upplevelse och
+            atmosfär. Skapelsen av hotellet har alltid grundats i filosofin att använda skandinaviska former
+            och färger för att framhäva det unika och skapa en plats som känns både inspirerande och
+            harmonisk.<br><br>Hotellet kommer att erbjuda olika delar med specifika syften, men allt är noggrant
+            sammanvävt
+            för att skapa en sammanhängande upplevelse. Från lobby och bar till restauranger, rum, spa
+            och gym – varje del bidrar till den röda tråden som genomsyrar hela hotellet.
+        </p>
+
+        <div class="hotel-stats">
+            <div class="stat-item">
+                <div class="stat-number">32,000 m<sup>2</sup></div>
+                <div class="stat-label">BTA</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">165</div>
+                <div class="stat-label">Rum</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">23-64 m<sup>2</sup></div>
+                <div class="stat-label">Storlek på rum</div>
+            </div>
+        </div>
+
+        <img class="pb0" src="assets/ute-ny.webp" alt="Njord Hotel Exterior"
+            style="width: 100%; max-width: 1200px; margin: 60px auto; display: block;">
+
+            <p class="showm">För en bättre upplevelse och mer information om projektet, besök vår webbplats på en dator</p>
+
+        <div class="section-header mhide">
+            <span class="section-label">DET VI ERBJUDER</span>
+            <h2 class="njord-heading pb20">ENHETSDETALJER</h2>
+            <p class="section-description pb20">Upptäck</p>
+
+            <div class="tab-navigation">
+                <a href="#" class="tab-link">HOTELLRUM</a>
+                <a href="#" class="tab-link active">HOTELL PLAN</a>
+            </div>
+
+            <div class="hotelrum-tabs" style="display: none;">
+                <a href="#" class="tab-link">STANDARD RUM</a>
+                <a href="#" class="tab-link">JUNIORSVIT</a>
+                <a href="#" class="tab-link">FAMILJERUM</a>
+                <a href="#" class="tab-link">SVIT P7</a>
+                <a href="#" class="tab-link">ÖVERSIKT ALLA</a>
+            </div>
+
+            <div class="floor-tabs">
+                <a href="#" class="tab-link active">PLAN -1</a>
+                <a href="#" class="tab-link">PLAN 0</a>
+                <a href="#" class="tab-link">PLAN 1</a>
+                <a href="#" class="tab-link">PLAN 2</a>
+                <a href="#" class="tab-link">PLAN 3</a>
+                <a href="#" class="tab-link">PLAN 4</a>
+                <a href="#" class="tab-link">PLAN 5</a>
+                <a href="#" class="tab-link">PLAN 6</a>
+                <a href="#" class="tab-link">PLAN 7</a>
+            </div>
+
+            <div class="plan-container">
+                <div class="plan-images hotel-plan-images">
+                    <img src="assets/nye planritninger/-1.png" alt="Plan -1" class="plan-image active">
+                    <img src="assets/nye planritninger/0.png" alt="Plan 0" class="plan-image">
+                    <img src="assets/nye planritninger/1.png" alt="Plan 1" class="plan-image">
+                    <img src="assets/nye planritninger/2.png" alt="Plan 2" class="plan-image">
+                    <img src="assets/nye planritninger/3.png" alt="Plan 3" class="plan-image">
+                    <img src="assets/nye planritninger/4.png" alt="Plan 4" class="plan-image">
+                    <img src="assets/nye planritninger/5.png" alt="Plan 5" class="plan-image">
+                    <img src="assets/nye planritninger/6.png" alt="Plan 6" class="plan-image">
+                    <img src="assets/nye planritninger/7.png" alt="Plan 7" class="plan-image">
+                </div>
+                <div class="plan-images hotelrum-images" style="display: none;">
+                    <img src="assets/Hotel/StandarRum.png" alt="Standard Rum" class="plan-image active">
+                    <img src="assets/Hotel/JuniorSvit.png" alt="Juniorsvit" class="plan-image">
+                    <img src="assets/Hotel/Familjrum.png" alt="Familjerum" class="plan-image">
+                    <img src="assets/Hotel/Svit p7.png" alt="Svit P7" class="plan-image">
+                    <img src="assets/Hotel/O╠êversikt Alla.png" alt="Översikt Alla" class="plan-image">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="amenities-section mhide">
+            <p class="section-description pb20">Upptäck</p>
+
+            <h4 class="section-label bottom-bar">RUMSÖVERSIKT</h4>
+
+            <div class="amenities-grid">
+                <div class="amenities-category">
+                    <h3>Bekvämligheter</h3>
+                    <ul>
+                        <li>Kylskåp med minibar</li>
+                        <li>Värdeskåp i sviten</li>
+                        <li>Te- och kaffemaskin</li>
+                    </ul>
+                </div>
+
+                <div class="amenities-category">
+                    <h3>Service</h3>
+                    <ul>
+                        <li>Städning dagligen</li>
+                        <li>Concierge</li>
+                        <li>Rumsservice dygnet runt</li>
+                    </ul>
+                </div>
+
+                <div class="amenities-category">
+                    <h3>Säng & Bad</h3>
+                    <ul>
+                        <li>Signature Sleep</li>
+                        <li>Duntäcken och kuddar</li>
+                        <li>Ortopediska och allergivänliga kuddar (på begäran)</li>
+                        <li>Bomullsbadrockar</li>
+                        <li>Smink-/rakningsspegel</li>
+                        <li>Hårtork</li>
+                        <li>Lyxiga badrumsprodukter</li>
+                    </ul>
+                </div>
+
+                <div class="amenities-category">
+                    <h3>Teknik</h3>
+                    <ul>
+                        <li>55–65-tums HD-platt-TV</li>
+                        <li>USB-laddningsstation vid sängen (230/120V)</li>
+                        <li>Telefon med flera linjer och röstbrevlåda</li>
+                        <li>Surfplatta med tillgång till hotelltjänster, spa- och restaurangbokningar, ljus- och
+                            temperaturkontroll samt nyhetsläsare</li>
+                        <li>Underhållningssystem med högklassig ljud- och videoutrustning, Bluetooth-anslutning och
+                            smart enhetskoppling</li>
+                        <li>Trådlös videostreaming från smarta enheter och HDMI-anslutning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reuse the menu overlay from index -->
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-header">
+                <div class="menu-actions">
+                    <a href="#" class="sign-in">
+                        <img src="assets/profile.png" style="width:50px;" alt="">
+                        <!-- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                                fill="currentColor" />
+                        </svg> -->
+                        SIGN IN
+                    </a>
+                    <a href="tel:+46730304978" class="phone">
+                        <img src="assets/mobile.png" style="width:50px;" alt="">
+                        <!-- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"
+                                fill="currentColor" />
+                        </svg> -->
+                        +46 73-030 49 78
+                    </a>
+                    <a href="https://njordhotel.com/#subscription" id="subscriptionBtn"  class="book-now">NYHETSBREV</a>
+                    <a href="intresseanmalan" class="book-now">INTERESSEANMALAN</a>
+                </div>
+            </div>
+            <div class="menu-main">
+                <nav class="menu-nav">
+                    <ul>
+                        <li><a href="https://njordhotel.com/">HEM</a></li>
+                        <li class="active"><a href="hotel">HOTELL</a></li>
+                        <li><a href="sviter">SVITER</a></li>
+                        <li><a href="om">OM OSS</a></li>
+                        <li><a href="intresseanmalan">KONTAKT</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-features">
+                    <div class="feature-item">
+                        <div class="feature-image">
+                            <img src="assets/hotell-front.png" alt="Hotel Front">
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-image">
+                            <img src="assets/hotell-side.png" alt="Hotel Side View">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/logo.png" alt="Njord Logo" class="footer-logo">
+                <p>Upplev total avkoppling i en harmonisk miljö där natur och elegans möts för att skapa en oförglömlig
+                    njutelse.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@njordhotel.com</p>
+                <p>Tel: +46 73-030 49 78</p>
+                <p>Adress: Trädgårdsgatan 9<br>452 31 Strömstad</p>
+            </div>
+            <div class="footer-section">
+                <h3>Länkar</h3>
+                <p><a href="https://njordhotel.com" target="_blank">Hem</a></p>
+                <p><a href="https://njordhotel.com/hotel" target="_blank">Hotel</a></p>
+                <p><a href="https://njordhotel.com/sviter" target="_blank">Sviter</a></p>
+                <p><a href="https://njordhotel.com/om-oss" target="_blank">Om oss</a></p>
+                <p><a href="https://njordhotel.com/kontakt" target="_blank">Kontakt</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Öppnar 2028</h3>
+                <p>Njord Hotel öppnar sommaren 2028</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Njord Hotel. All rights reserved.</p>
+            <p>Website by <a href="https://myrvold.marketing" target="_blank">Myrvold Marketing</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-close">×</div>
+        <img src="" alt="Enlarged view">
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

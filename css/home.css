@@ -1,0 +1,620 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    /* width: 100vw; */
+    overflow: hidden;
+
+}
+
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0s ease-in-out;
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Mørk transparent bakgrunn */
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide video,
+.slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 2;
+    /* Øker z-index for å være over overlayet */
+    font-family: 'SaolDisplay-Light';
+}
+
+/* Hero-specific paragraph style */
+.hero-content p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.text-content p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+.light-italic {
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+/* Hero discover link - alltid hvit */
+.discover-link-hero {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.discover-link-hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.discover-link-hero::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.7s ease;
+}
+
+.discover-link-hero:hover::after {
+    opacity: 0;
+}
+
+.discover-link-hero:hover::before {
+    width: 100%;
+}
+
+.discover-link-hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.discover-link-hero::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.7s ease;
+}
+
+.discover-link-hero:hover::after {
+    opacity: 0;
+}
+
+.discover-link-hero:hover::before {
+    width: 100%;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+}
+
+
+/* Navigation Button */
+.nav-button {
+    background: none;
+    border: none;
+    padding: 2em 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.nav-indicator {
+    width: 50px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-indicator.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-indicator .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-indicator.active .progress {
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Featured Voyages Section */
+.featured-voyages {
+    padding: 100px 0;
+    background: #fff;
+}
+
+
+
+
+
+.voyages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.voyage-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.voyage-card {
+    position: relative;
+}
+
+.voyage-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.voyage-card .tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(128, 128, 128, 0.8);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.voyage-info {
+    background: #F8F8F8;
+    padding: 30px;
+    text-align: left;
+    height: 200px;
+    position: relative;
+}
+
+.voyage-discover-link {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    position: absolute;
+    bottom: 30px;
+    display: inline-block;
+}
+
+.voyage-info .tag {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.voyage-info p {
+    margin: 0 0 20px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.voyage-info .discover-link {
+    color: #000;
+    border-bottom: 1px solid #000;
+    position: absolute;
+    bottom: 30px;
+}
+
+
+.voyage-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+.voyage-discover-link {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    position: absolute;
+    bottom: 30px;
+    display: inline-block;
+}
+
+.voyage-discover-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000;
+    opacity: 1;
+}
+
+.voyage-discover-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000;
+    transition: width 0.7s ease;
+}
+
+.voyage-discover-link:hover::after {
+    opacity: 0;
+}
+
+.voyage-discover-link:hover::before {
+    width: 100%;
+}
+
+
+/* Suites Section */
+.suites-section {
+    padding-top: 0;
+    padding-bottom: 40px;
+    background-color: #fff;
+    color: #333;
+}
+
+.suites-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 8% 10% 0% 15%;
+}
+
+.suites-text {
+    flex: 0 1 42%;
+}
+
+.suites-text p {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+
+
+
+/* Design Section */
+.design-section {
+    padding: 100px 0;
+    background: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.design-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.design-section .design-grid img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+}
+
+.suites-image {
+    flex: 0 1 52%;
+}
+
+.suites-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Hotel Exterior Section */
+.hotel-exterior {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.hotel-exterior .hotel-image {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hotel-exterior .hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+/* Vision Section */
+.vision-section {
+    padding: 100px 20px;
+    background: #fff;
+}
+
+.vision-section p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+}
+
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    /* display: flex; */
+    gap: 60px;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.vision-content>div {
+    flex: 0 0 auto;
+}
+
+.vision-content p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    padding-top: 35px;
+    /* Changed from 75px to 35px to align with heading */
+}
+
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vision-grid .vision-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+
+.vision-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+section.subscription {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
+section.subscription input {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 5px;
+    height: 45px;
+    background: #F8F8F8;
+    width: 230px;
+}
+.fgroup {
+    padding-bottom: 20px;
+}
+
+.fgroup input {
+    margin-right: -5px;
+}
+
+.sgroup button {
+    background: #000;
+    height: 45px;
+    color: #fff;
+    width: 140px;
+    border: 0;
+}
+
+.sgroup input {
+    width: 316px!important;
+    margin-right: -4px;
+}
+
+p.sub_bottom_text {
+    font-style: italic;
+    text-align: center;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+section.subscription h2.njord-heading {
+    font-size: 68px;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .voyages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+
+    }
+
+
+    .voyage-card {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Responsive design for vision section */
+@media (max-width: 1024px) {
+    .vision-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

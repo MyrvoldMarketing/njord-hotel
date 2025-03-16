@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Intresseanmälan - Njord Hotell</title>
+    <link rel="stylesheet" href="css/styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/intresseanmalan.css">
+
+
+</head>
+
+<body class="contact-page">
+    <div class="interest-form-layout">
+        <div class="interest-form-left">
+            <div class="contact-info">
+                <h2 class="njord-heading">Personlig Konsult</h2>
+                <p>En av våra konsulter kommer att svara snabbt via e-post med information och tillgänglighet för din
+                    förfrågan.</p>
+            </div>
+        </div>
+        <div class="interest-form-right">
+            <div class="contact-form-container">
+                <img src="assets/logo-svart.png" alt="Njord Hotel Logo" class="contact-logo">
+                <h1 class="njord-heading" style="text-align: center;">SÖK OM ÄGAR SVITER PÅ<br> NJORD HOTEL</h1>
+                <p class="form-subtitle">Vi hyr ut din svit när du inte använder den.</p>
+                <form class="contact-form" id="interestForm" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <span class="required">*</span>
+                            <input type="text" id="firstname" name="firstname" placeholder="FÖRNAMN" required>
+                        </div>
+                        <div class="form-group">
+                            <span class="required">*</span>
+                            <input type="text" id="lastname" name="lastname" placeholder="EFTERNAMN" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <span class="required">*</span>
+                            <input type="email" id="email" name="email" placeholder="E-POST" required>
+                        </div>
+                        <div class="form-group">
+                            <span class="required">*</span>
+                            <input type="tel" id="phone" name="phone" placeholder="TELEFONNUMMER" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea id="details" name="details" placeholder="Ytterligare information du vill dela med oss"
+                            style="font-family: 'Helvetica Neue', Arial, sans-serif;"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="marketing" required>
+                            <span>Jag samtycker till att Njord Hotell skickar mig marknadsföringsmeddelanden och
+                                erbjudanden via e-post. Jag förstår att jag när som helst kan avregistrera mig genom att
+                                följa instruktionerna i varje marknadsföringsmeddelande.</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="research" required>
+                            <span>Jag samtycker till att Njord Hotell skickar mig enkäter och rapporter för att
+                                förbättra sina tjänster och genomföra marknadsundersökningar.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="discover-button"><span>SKICKA FÖRFRÅGAN</span></button>
+
+                    <p class="privacy-notice">
+                        Genom att välja "Skicka" bekräftar jag att Njord Hotell kommer att behandla mina personuppgifter
+                        i enlighet med vår Integritetspolicy.
+                        Jag förstår att jag när som helst kan återkalla mitt samtycke genom att kontakta
+                        privacy@njordhotell.com
+                    </p>
+                </form>
+
+                <p class="privacy-notice">
+                    Genom att välja "Skicka" bekräftar jag att Njord Hotell kommer att behandla mina personuppgifter i
+                    enlighet med vår Integritetspolicy.
+                    Jag förstår att jag när som helst kan återkalla mitt samtycke genom att kontakta
+                    privacy@njordhotell.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <button class="menu-toggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="menu-text" data-text-default="MENY" data-text-active="CLOSE">MENY</span>
+    </button>
+
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-header">
+                <div class="menu-actions">
+                    <a href="#" class="sign-in">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                                fill="currentColor" />
+                        </svg>
+                        SIGN IN
+                    </a>
+                    <a href="tel:+46123456789" class="phone">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"
+                                fill="currentColor" />
+                        </svg>
+                        +46 123 456 789
+                    </a>
+                    <a href="intresseanmalan.html" class="book-now">INTRESSEANMÄLAN</a>
+                </div>
+            </div>
+            <div class="menu-main">
+                <nav class="menu-nav">
+                    <ul>
+                        <li><a href="index.html">HEM</a></li>
+                        <li><a href="#about">OM OSS</a></li>
+                        <li><a href="#rooms">RUM</a></li>
+                        <li><a href="#spa">SPA</a></li>
+                        <li><a href="#contact">KONTAKT</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-features">
+                    <div class="feature-item">
+                        <div class="feature-image">
+                            <img src="assets/sovrum.jpg" alt="Luxury Suite">
+                        </div>
+                        <div class="feature-text">
+                            <span class="label">NEW ROOM ADDED</span>
+                            <h3>Luxury Suite</h3>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-image">
+                            <img src="assets/Framsidan skymning.jpg" alt="Hotel Exterior">
+                        </div>
+                        <div class="feature-text">
+                            <span class="label">FEATURED</span>
+                            <h3>Njord Hotel</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+
+</html>
